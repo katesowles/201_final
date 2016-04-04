@@ -35,5 +35,5 @@ addToArray("TDA", dallesChinookArray, "Chinook");
 addToArray("TDA", dallesCohoArray, "Coho");
 addToTotalArray("BON", bvilleTotalArray);
 addToTotalArray("TDA", dallesTotalArray);
-lastXXYears(bvilleTotalArray,bvilleTotals,50);
-lastXXYears(dallesTotalArray,dallesTotals,50);
+lastXXYears(bvilleTotalArray,bvilleTotals,10);
+lastXXYears(dallesTotalArray,dallesTotals,10);
