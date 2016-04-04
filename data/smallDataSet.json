@@ -3,70 +3,60 @@
     "Project": "BON",
     "Year": 2014,
     "All Chinook": 1339659,
-    "All Steelhead": 326001,
     "All Coho": 294534
   },
   {
     "Project": "BON",
     "Year": 2013,
     "All Chinook": 1300711,
-    "All Steelhead": 234047,
     "All Coho": 66758
   },
   {
     "Project": "BON",
     "Year": 2012,
     "All Chinook": 733930,
-    "All Steelhead": 235303,
     "All Coho": 60023
   },
   {
     "Project": "BON",
     "Year": 2011,
     "All Chinook": 863201,
-    "All Steelhead": 369365,
     "All Coho": 149883
   },
   {
     "Project": "BON",
     "Year": 2010,
     "All Chinook": 902440,
-    "All Steelhead": 416603,
     "All Coho": 127855
   },
   {
     "Project": "TDA",
     "Year": 2014,
     "All Chinook": 905449,
-    "All Steelhead": 255691,
     "All Coho": 157646
   },
   {
     "Project": "TDA",
     "Year": 2013,
     "All Chinook": 898424,
-    "All Steelhead": 190750,
     "All Coho": 26682
   },
   {
     "Project": "TDA",
     "Year": 2012,
     "All Chinook": 539930,
-    "All Steelhead": 201640,
     "All Coho": 34019
   },
   {
     "Project": "TDA",
     "Year": 2011,
     "All Chinook": 591869,
-    "All Steelhead": 299007,
     "All Coho": 76753
   },
   {
     "Project": "TDA",
     "Year": 2010,
     "All Chinook": 618699,
-    "All Steelhead": 333033,
     "All Coho": 31374
   }
 ]
