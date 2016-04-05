@@ -60,9 +60,9 @@ addToArray("TDA", dallesCohoArray, "Coho");             // Generates total numbe
 addToArray("TDA", dallesSteelheadArray, "Steelhead");   // Generates total number of Steelhead in The Dalles each year
 addToTotalArray("BON", bvilleTotalArray);               // Generates total number of ALL Salmon species in Bonneville each year
 addToTotalArray("TDA", dallesTotalArray);               // Generates total number of ALL Salmon species in The Dalles each year
-addToAnnualSplitArray(annualChinookPercent,"Chinook");
-addToAnnualSplitArray(annualCohoPercent,"Coho");
-addToAnnualSplitArray(annualSteelheadPercent,"Steelhead");
+addToAnnualSplitArray(annualChinookPercent,"Chinook");  // Generates an array with the annual total of Chinook in Bonneville
+addToAnnualSplitArray(annualCohoPercent,"Coho");        // Generates an array with the annual total of Coho in Bonneville
+addToAnnualSplitArray(annualSteelheadPercent,"Steelhead");  // Generates an array with the annual total of Steelhead in Bonneville
 
 function speciesPerDamPerYear(maximum) {
     $(function () {
@@ -132,7 +132,7 @@ function speciesPerDamPerYear(maximum) {
     });
 }
 
-// speciesPerDamPerYear(10)    // 10, 25, 50
+speciesPerDamPerYear(10)      // 10, 25, 50
 
 function speciesSplit(index) {
     $(function () {
@@ -163,6 +163,9 @@ function speciesSplit(index) {
             plotOptions: {
                 column: {
                     shadow: 'false',
+                },
+                pie: {
+                borderColor: 'null'
                 }
             },
             series: [{
@@ -179,4 +182,4 @@ function speciesSplit(index) {
     });
 }
 
-speciesSplit(0);            // 0 = 2014, 1 = 2013 ...
+speciesSplit(16);            // 0 = 2014, 1 = 2013 ...
