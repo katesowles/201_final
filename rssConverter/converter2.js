@@ -10,6 +10,8 @@
 
 var rssData = [];  // should make an array with 4 objects [{Willamette Falls}, {Bonneville Dam}, {The Dalles Dam}, {John Day Dam}]
 
+var fishCount = 0;
+
 var rawData = [];
 var damsArray = [];
 var chinookCohoData =[
@@ -48,19 +50,27 @@ function initialize() {
 
 
       feed.load(function(result) {   // creates "result" object
-        console.log('Load result: ', result);
+
         if (!result.error) {
 
           for (var i = 0; i < result.feed.entries.length; i++) {
             rssData.push(result.feed.entries[i]);
           }
-          console.log('rssData: ', rssData);
+
 
           //***  rssData-manipulation function call here:
           makeStripData(rssData, rawData);
           makeProjectDate(rawData, chinookCohoData);
           makeChinookCoho(rawData, chinookCohoData);
+
           console.log('Test 1 --- chinookCohoData:  ', chinookCohoData);
+
+          // calc total fish passed Bonneville Dam:
+          fishCount = parseInt(chinookCohoData[0].Chinook) + parseInt(chinookCohoData[0].Coho);
+
+          // display fishCount:
+          var fishCountId = document.getElementById('fishCount');  // to display fishCount in the html
+          fishCountId.textContent = 'Today ' + fishCount + ' Salmon passed the Bonneville dam.';
 
           } // if close
 
@@ -85,7 +95,7 @@ google.setOnLoadCallback(initialize);
 
 function makeStripData (array1, array2) {
 
-        for (var i = 1; i < 3; i++) {  // array1 = rssData, array2 = rawData // i = 1 and i < 3 is because we only need the 2nd and 3rd item, 
+        for (var i = 1; i < 3; i++) {  // array1 = rssData, array2 = rawData // i = 1 and i < 3 is because we only need the 2nd and 3rd item,
             var stripData = [];
 
             stripData.push(array1[i].title);
@@ -150,5 +160,6 @@ function makeChinookCoho(array1, array2) {    // array1 = rawData, array2 = chin
 
 
 /*==============================================================
-                           TEST AREA:
+             Functions to display fishCount in html:
+                         id="fishCount"
 ===============================================================*/
