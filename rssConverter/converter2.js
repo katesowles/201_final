@@ -45,37 +45,37 @@ google.load("feeds", "1");
 function initialize() {
 
       var feed = new google.feeds.Feed("http://www.fpc.org/rss/rssAdultCounts.aspx");
-      var data = [];
+
 
       feed.load(function(result) {   // creates "result" object
+        console.log('Load result: ', result);
         if (!result.error) {
 
           for (var i = 0; i < result.feed.entries.length; i++) {
-            data.push(result.feed.entries[i]);
+            rssData.push(result.feed.entries[i]);
           }
-          rssData = data;
-          console.log('data: ', data);
           console.log('rssData: ', rssData);
-        }
+
+          //***  rssData-manipulation function call here:
+          makeStripData(rssData, rawData);
+          makeProjectDate(rawData, chinookCohoData);
+          makeChinookCoho(rawData, chinookCohoData);
+          console.log('Test 1 --- chinookCohoData:  ', chinookCohoData);
+
+          } // if close
+
        }); // feed.load close
 
 
 
-
-
-        //***  rssData-manipulation function call here:
-        makeStripData(rssData, rawData);
-        makeProjectDate(rawData, chinookCohoData);
-        makeChinookCoho(rawData, chinookCohoData);
-
 } // initialize() close
 
-console.log('Test 1 --- chinookCohoData:  ', chinookCohoData);
+
 
 // RSS-data is TIMESENSITIVE: will run when rss-data is ready:
 google.setOnLoadCallback(initialize);
 
-console.log('Test 2 --- chinookCohoData:  ', chinookCohoData);
+
 
 /*==============================================
       Functions for processing Rss-data:
@@ -85,7 +85,7 @@ console.log('Test 2 --- chinookCohoData:  ', chinookCohoData);
 
 function makeStripData (array1, array2) {
 
-        for (var i = 0; i < array1.length; i++) {  // array1 = rssData, array2 = rawData
+        for (var i = 1; i < 3; i++) {  // array1 = rssData, array2 = rawData // i = 1 and i < 3 is because we only need the 2nd and 3rd item, 
             var stripData = [];
 
             stripData.push(array1[i].title);
@@ -97,8 +97,10 @@ function makeStripData (array1, array2) {
 
 //****** STEP 2 --- turn title-property from rawData into new project- and date-properties in chinookCohoData-Objects:
 function makeProjectDate(array1, array2) {   // array1 = rawData, array2 = chinookCohoData
+    console.log('inside makeProjectDate - rawData - array1: ', array1);
+    console.log('inside makeProjectDate - chinookCohoData - array2: ', array2);
 
-    for (var i = 0; i < array1.length; i++) {
+    for (var i = 0; i < array2.length; i++) {
 
         var titleSplit = array1[i][0].split(" ");  // this accesses the title info in rawData at index [0]
 
@@ -117,13 +119,16 @@ function makeProjectDate(array1, array2) {   // array1 = rawData, array2 = chino
 
 
 //****** STEP 3 --- turn content property from rawData into new Chinook and Coho properties...
-function makeChinookCoho(array1, array2) {    // array1 = rawData, array2 = ChinookCoho
+function makeChinookCoho(array1, array2) {    // array1 = rawData, array2 = chinookCohoData
 
     for (var i = 0; i < array1.length; i++) {
 
 
         var contentSplit = array1[i][1].split("; ");    // this accesses the content info in rawData at index [1],
-                                                        // contentSplit is now an array ["Chinook Adult 90", "Chinook Jack 2"....]
+                                                       // contentSplit is now an array ["Chinook Adult 90", "Chinook Jack 2"....]
+           console.log('inside makeChinookCoho - array1.length:', array1.length);
+           console.log('inside makeChinookCoho - array2.length:', array2.length);
+           console.log('inside makeChinookCoho - contentSplit.length:', contentSplit.length);
 
         for (var k = 0; k < contentSplit.length; k++) {     // lops through contentSplit-Array
             var x = contentSplit[k].split(" ");     // creates array with ["Chinook", "Adult", "90"]
