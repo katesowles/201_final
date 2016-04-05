@@ -66,7 +66,7 @@ addToAnnualSplitArray(annualSteelheadPercent,"Steelhead");  // Generates an arra
 
 function speciesPerDamPerYear(maximum) {
     $(function () {
-        $('#historicalAnnualTotals').highcharts({
+        $('#speciesPerDamPerYear').highcharts({
             chart: {
                 type: 'column',
             },
@@ -132,11 +132,11 @@ function speciesPerDamPerYear(maximum) {
     });
 }
 
-speciesPerDamPerYear(10)      // 10, 25, 50
+// speciesPerDamPerYear(10)      // 10, 25, 50
 
 function speciesSplit(index) {
     $(function () {
-        $('#historicalAnnualTotals').highcharts({
+        $('#speciesSplit').highcharts({
             chart: {
                 type: 'pie',
             },
@@ -182,4 +182,74 @@ function speciesSplit(index) {
     });
 }
 
-speciesSplit(16);            // 0 = 2014, 1 = 2013 ...
+// speciesSplit(16);            // 0 = 2014, 1 = 2013 ...
+
+function currentVsHistoricalDalies () {
+    $(function () {
+        $('#currentVsHistoricalDalies').highcharts({
+            chart: {
+                type: 'line',
+            },
+            title: {
+                text: 'Historical Daily Average vs Current Day'
+            },
+            xAxis: {
+                categories: yearArray
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Salmon Counted'
+                },
+                stackLabels: {
+                    enabled: false
+                }
+            },
+            tooltip: {
+                formatter: function () {
+                    return '<b>' + this.x + '</b><br/>' +
+                        this.series.name + ': ' + numberWithCommas(this.y) + '<br/>' +
+                        'Total: ' + numberWithCommas(this.point.stackTotal);
+                }
+            },
+            plotOptions: {
+                column: {
+                    stacking: 'normal',
+                }
+            },
+            series: [{
+                name: 'Bonneville Chinook',
+                data: bvilleChinookArray.slice(0,maximum),
+                stack: 'Bonneville',
+                color: '#ffcccc'
+            }, {
+                name: 'Bonneville Steelhead',
+                data: bvilleSteelheadArray.slice(0,maximum),
+                stack: 'Bonneville',
+                color: '#ffaaaa'
+            }, {
+                name: 'Bonneville Coho',
+                data: bvilleCohoArray.slice(0,maximum),
+                stack: 'Bonneville',
+                color: '#ff8888'
+            }, {
+                name: 'The Dalles Chinook',
+                data: dallesChinookArray.slice(0,maximum),
+                stack: 'The Dalles',
+                color: '#ffeecc'
+            }, {
+                name: 'The Dalles Steelhead',
+                data: dallesSteelheadArray.slice(0,maximum),
+                stack: 'The Dalles',
+                color: '#ffccaa'
+            }, {
+                name: 'The Dalles Coho',
+                data: dallesCohoArray.slice(0,maximum),
+                stack: 'The Dalles',
+                color: '#ffaa88'
+            }]
+        });
+    });
+}
+
+currentVsHistoricalDalies();
