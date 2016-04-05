@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8"></meta>
     <title></title>
+    <script src="https://code.jquery.com/jquery-2.2.2.js" integrity="sha256-4/zUCqiq0kqxhZIyp4G0Gk+AOtCJsY1TA00k5ClsZYE=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/normalize.css"></link>
     <link rel="stylesheet" href="css/skeleton.css"></link>
     <link rel="stylesheet" href="css/main.css"></link>
@@ -14,19 +15,23 @@
       </header>
     </div>
     <div class="pageOne">
+        <h2>PAGE ONE (map)</h2>
     </div>
     <div class="pageTwo">
+        <h2>PAGE TWO (charts)</h2>
+        <div id="historicalAnnualTotals"></div>
+        <div id="speciesSplit"></div>
     </div>
     <div class="pageThree">
+        <h2>PAGE THREE (contact/geolocate)</h2>
     </div>
     <div class="footer">
       <footer>
         <h2>testTwo!</h2>
       </footer>
     </div>
-    <script src="data/smallDataSet.json"></script> <!-- REPLACE WITH HISTORIALANNUALDATA.JSON ONCE WE'RE READY FOR THE FULL DATA SET -->
-    <script src="js/variables.json"></script>
-    <script src="js/arrays.json"></script>
-    <script src="js/functions.json"></script>
+    <script src="js/highcharts.js"></script>
+    <script src="data/historicalAnnualData.json"></script> <!-- REPLACE WITH HISTORIALANNUALDATA.JSON ONCE WE'RE READY FOR THE FULL DATA SET -->
+    <script src="js/chartGeneration.js"></script>
   </body>
 </html>
