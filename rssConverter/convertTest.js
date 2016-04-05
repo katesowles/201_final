@@ -37,14 +37,16 @@ rssData = [
                             year: 2016,
                             date: "",
                             Chinook: 0,
-                            Coho: 0
+                            Coho: 0,
+                            Steelhead: 0
                         },
                         {                       // Object[1] = The Dalles Dam
                             project: "",
                             year: 2016,
                             date: "",
                             Chinook: 0,
-                            Coho: 0
+                            Coho: 0,
+                            Steelhead: 0
                         }
                         ];
 
@@ -100,6 +102,8 @@ var makeChinookCoho = function() {
                     chinookCohoData[i].Chinook = x.pop();
                 } else if (x[0] == "Coho" && x[1] == "Adult") {
                     chinookCohoData[i].Coho = x.pop();
+                } else if (x[0] == "Steelhead") {
+                    chinookCohoData[i].Steelhead = x.pop();
                 }
         } // inner for-loop close
 
