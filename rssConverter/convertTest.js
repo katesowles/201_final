@@ -112,6 +112,15 @@ var makeChinookCoho = function() {
 } // makeChinookCoho() close
 
 
+//****** STEP 4 --- combining all steps into one:
+var makeFishDataObjects = function () {
+    makeStripData();
+    makeProjectDate();
+}
+
+
+
+
 /*==============================================================
                            TEST AREA:
 ===============================================================*/
