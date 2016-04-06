@@ -10,24 +10,43 @@ body {
   color: #384047;
 }
 
-.wrapper {
-  max-width: 90%;
-  margin: 10px auto;
-  padding: 10px 20px;
-  background: #f4f7f8;
-  border-radius: 8px;
-}
-
 h1, h2 {
-  margin: 30px 0;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  line-height: 2em;
+  letter-spacing: .08em;
   text-align: center;
-  color: black;
-  font-family: 'Helvetica', sans-serif;
 }
 
-.graphic {
-  margin: 1em auto;
-  width: 20%;
+h3 {
+  font-family: 'Lato', “Helvetica Neue”, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1em;
+  font-style: italic;
+  letter-spacing: .08em;
+}
+
+p {
+  font-family: 'Playfair Display', Times, serif;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: .1em;
+  font-size: 14px;
+  padding: 2px;
+}
+
+ul, li {
+  font-family: 'Playfair Display', Times, serif;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: .1em;
+  font-size: 14px;
+  padding: 2px;
+  list-style: none;
+}
+
+img {
+  width: 100%;
 }
 
 /*for loading icon*/
@@ -41,4 +60,42 @@ h1, h2 {
   margin: 0 auto;
 
 }
+
+.wrapper {
+  max-width: 90%;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background: #f4f7f8;
+  border-radius: 8px;
+}
+
+.graphic {
+  margin: 1em auto;
+  width: 20%;
+}
+
+.chartDropDown {
+  margin: 0 auto;
+  padding: 50px;
+  text-align: center;
+}
+
+.siteDescriptions {
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 40px 30px;
+}
+
+.bonnevilleDam,
+.eagleCreekTrailhead,
+.klickitatRiverFalls,
+.hermanCreekTrailhead {
+  border: 2px solid;
+  padding: 25px;
+  margin: 10px auto;
+  display: none; /* ¡¡¡¡¡all divs are currently on display none!!!!*/
+}
+
+
 /*hannah addition end*/

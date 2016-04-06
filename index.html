@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="eng">
   <head>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic|Lato:400,300' rel='stylesheet' type='text/css'>
     <meta charset="utf-8"></meta>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SlamminSalmon!</title>
@@ -16,21 +17,94 @@
       </header>
     </div>
     <div class="pageOne">
-        <h2>PAGE ONE (map)</h2>
+        <h1>PAGE ONE (map)</h1>
+        <div class="siteDescriptions">
+      <h1>Fish Viewing Sites</h1>
+      <div class="bonnevilleDam">
+        <h3>Bonneville Dam</h3>
+        <p>
+        Bonneville Lock and Dam is located 145 river miles from the mouth of the Columbia River and about 40 miles east of Portland, Ore., near Cascade Locks, Ore., and North Bonneville, Wash.
+        <br>
+        A Public Works Administration project of President Franklin D. Roosevelt’s New Deal, portions of Bonneville Lock and Dam Project were declared a National Historic Landmark in 1987.
+        </p>
+        <ul>
+          <li>Directions: From Portland, OR, 40 miles east on I-84. From Vancouver, WA, 40 miles east on WA 14.</li>
+          <li>Wheelchair Accessibility: Yes</li>
+          <li>Fish Viewing: In the Fish Viewing Building, where you can see fish on laddrers and adult salmon in their upstream migration</li>
+          <li>Restrooms: Yes, inside the Visitor Orientation Building</li>
+          <li>Reference: <a href="http://www.nwp.usace.army.mil/Locations/ColumbiaRiver/Bonneville.aspx">ACOE</a></li>
+        </ul>
+        <img src="img/bonneville_dam_fish_ladders.jpg" alt="bville fish" />
+      </div>
+      <div class="eagleCreekTrailhead">
+        <h3>Eagle Creek Trailhead</h3>
+        <p>
+          The Eagle Creek trailhead is a busy place most weekends. Here sits the jump-off point for a half-dozen trails. In addition to Eagle Creek hikers, it accommodates PCT thru-hikers, locals who enjoy the day-use picnic area, site-seers enjoying the nearby fish hatcheries, and campers at nearby Eagle Creek Campground.
+          <br>
+          Unfortunately, with the crowds, the Eagle Creek trailhead has seen a great number of break-ins to cars. Thieves are known to frequent this area and work quickly. They tend to go for the obvious (valuables left in cars) but also for identity information left in glove compartments. It is an attractive area for clouters because of it's proximity to the interstate on-ramp.
+        </p>
+        <ul>
+          <li>Directions: Coming from Portland, travel eastbound on I-84, and turn off at Exit #41. At the bottom of the ramp turn right. Go about 1/2 mile to the end of the road. You will go passed a footbridge (that takes hikers up to Wauna Viewpoint) as the road narrows to one lane. Continue a short ways to a large parking lot, parking only in designated spaces.</li>
+          <li>Wheelchair Accessibility: In picnic shelter</li>
+          <li>Fish Viewing: Yes</li>
+          <li>Restrooms: No</li>
+          <li>Reference: <a href="http://www.fs.usda.gov/recarea/crgnsa/recarea/?recid=29910">USDA</a></li>
+        </ul>
+        <img src="img/EagleCreekMap.jpg" alt="eagle creek fish" />
+      </div>
+      <div class="klickitatRiverFalls">
+        <h3>Klickitat River Falls</h3>
+        <p>
+          The Klickitat Trail, a non-motorized multiple use trail, follows the first 31 miles of an old railroad corridor that once linked the towns of Lyle and Goldendale. It is unique among rail trails. Nowhere else is there a rail trail that starts in one of the nation’s only National Scenic Areas, winds along a nationally designated Wild and Scenic River, and finishes by going through a remote, beautiful tributary canyon.
+        </p>
+        <ul>
+          <li>Directions: To get there from the Portland area, take I-84 east to the third Hood River Exit (#64), cross the Hood River Bridge to Washington, and turn right (east) on Hwy. 14. Go about 13 miles to the Klickitat River Bridge (the entrance to Lyle), and just beyond the bridge turn left (north) on Hwy. 142. Immediately turn left at the trailhead entrance. There are restroom facilities at this location.</li>
+          <li>Wheelchair Accessibility: No</li>
+          <li>Fish Viewing: Yes</li>
+          <li>Restrooms: No</li>
+          <li>Reference: <a href="http://www.oregonhikers.org/field_guide/Klickitat_Trail:_Lyle_to_Klickitat_Hike">Oregon Hikers</a></li>
+        </ul>
+        <img src="img/klickitat_river.jpg" alt="klickitat fish" />
+      </div>
+      <div class="hermanCreekTrailhead">
+        <h3>Herman Creek Trailhead</h3>
+        <p>
+          This trail is in the Mark O. Hatfield Wilderness.  Herman Creek Trail explores the largest surviving forest of old growth fir, cedar, and hemlock left in the Columbia Gorge. Spring fed groves of ancient cedar tower above Big Cedar Swamp Shelter while equally large Noble Fir, Douglas Fir and Western Hemlock fill a fire-preserved basin of the East Fork Herman Creek. A parade of waterfalls, innumerable moss carpeted creeks, a sub-alpine lake, and ridge top vistas offer a variety of scenery for either the equestrian or backpacker using the Herman Creek Trail.
+        </p>
+        <ul>
+          <li>Directions: Take I-84 East from Portland about 40 miles and take exit 44 for Cascade Locks. Take the road through town, East, then under the freeway, continue East on the frontage road on the South side of the freeway for about 2 more miles to the Herman Creek Campground sign.</li>
+          <li>Wheelchair Accessibility: No</li>
+          <li>Fish Viewing: Yes</li>
+          <li>Restrooms: No</li>
+          <li>Reference: <a href="https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=herman%20creek%20trailhead%20wheelchair">USDA</a></li>
+        </ul>
+        <img src="img/HermanWyethMap.jpg" alt="klickitat fish" />
+      </div>
+    </div>
     </div>
     <div class="pageTwo">
-        <h2>PAGE TWO (charts)</h2>
+        <h1>PAGE TWO (charts)</h1>
         <div id="historicalAnnualTotals"></div>
         <div id="speciesSplit"></div>
+        <div class="chartDropDown">
+          <select id="dropDown">
+            <option value="one" id="dropDownOne">one</option>
+            <option value="two" class="dropDownTwo">two</option>
+            <option value="three" class="dropDownThree">three</option>
+            <option value="four" class="dropDownFour">four</option>
+            <option value="five" class="dropDownFive">five</option>
+            <option value="six" class="dropDownSix">six</option>
+            <option value="seven" class="dropDownSeven">seven</option>
+            <option value="eight" class="dropDownEight">eight</option>
+            <option value="nine" class="dropDownNine">nine</option>
+          </select>
+        </div>
     </div>
     <div class="pageThree">
-        <h2>PAGE THREE (contact/geolocate)</h2>
+        <h1>PAGE THREE (contact/geolocate)</h1>
         <div id="error">You need JavaScript enabled for this application to work</div>
         <h1>Geolocation</h1>
         <div class="wrapper">
-          <div class="graphic">
-            <img src="img/salmonLogoOne.svg" alt="Slamon Logo" />
-          </div>
           <div id="viewSpots">
             <h1>Fish Viewing Spots</h1>
             <p id="load">Aquiring Location<br /><img src="img/ring-alt.gif" alt="Progress bar"></p>
@@ -38,6 +112,8 @@
               <li><span data-lat="45.644276" data-lon="-121.940634" class="getSpan">? miles to</span> Bonnaville Dam</li>
               <li><span data-lat="45.613993" data-lon="-121.134115" class="getSpan">? miles to</span> Dalles Dam</li>
               <li><span data-lat="45.640337" data-lon="-121.928959" class="getSpan">? miles to</span> Eagle Creek</li>
+              <li><span data-lat="45.7113778" data-lon="-121.2649318" class="getSpan">? miles to</span> Klickitat River Falls</li>
+              <li><span data-lat="45.682601" data-lon="-121.842588" class="getSpan">? miles to</span> Herman Creek Trainhead</li>
             </ul>
           </div>
         </div>
@@ -45,7 +121,7 @@
     <div class="footer">
       <footer>
         <h2>testTwo!</h2>
-        <h3>Enter in your email below to get email updates on salmon counts</h3>
+        <h3>Enter in your email below to get updates on salmon counts</h3>
         <form class="subscribe" action="index.html" method="post">
           Email:<br>
           <input type="text" name="email">
@@ -56,5 +132,6 @@
     <script src="js/highcharts.js"></script>
     <script src="data/historicalAnnualData.json"></script> <!-- REPLACE WITH HISTORIALANNUALDATA.JSON ONCE WE'RE READY FOR THE FULL DATA SET -->
     <script src="js/chartGeneration.js"></script>
+    <script src="js/chartDropDown.js"></script>
   </body>
 </html>
