@@ -1,4 +1,4 @@
-[
+var bonnevilleDailies = [
   {
     "Date": "3/11/1966",
     "Chinook": 1,

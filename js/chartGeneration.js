@@ -1,23 +1,18 @@
-var initialDate = new Date();
+var monthToMatch;
+var dayToMatch;
+var initialDate             =   new Date();
 var dateArray               =   [];
-var yearArray               =   [];
-var bvilleChinookArray      =   [];
-var dallesChinookArray      =   [];
-var bvilleCohoArray         =   [];
-var dallesCohoArray         =   [];
-var bvilleSteelheadArray    =   [];
-var dallesSteelheadArray    =   [];
-var bvilleTotalArray        =   [];
-var dallesTotalArray        =   [];
+var dailyTotalArray         =   [];
 
-var chinookTotals           =   [];
-var cohoTotals              =   [];
-var steelheadTotals         =   [];
-var annualChinookPercent    =   [];
-var annualCohoPercent       =   [];
-var annualSteelheadPercent  =   [];
+
+// var chinookTotals           =   [];
+// var cohoTotals              =   [];
+// var steelheadTotals         =   [];
 
 ///////////////////////// FUNCTIONS TO PLUG INTO CHARTS ////////////////////////
+
+// needed for speciesPerDamPerYear chart & speciesSplit chart //////////////////
+var yearArray               =   [];
 
 function addToYearArray () {
     for (dataIndex = 0; dataIndex < fishCount.length; dataIndex++) {
@@ -27,6 +22,17 @@ function addToYearArray () {
     }
 }
 
+addToYearArray();
+
+
+// needed for speciesPerDamPerYear chart ///////////////////////////////////////
+var bvilleChinookArray      =   [];
+var dallesChinookArray      =   [];
+var bvilleCohoArray         =   [];
+var dallesCohoArray         =   [];
+var bvilleSteelheadArray    =   [];
+var dallesSteelheadArray    =   [];
+
 function addToArray (project,array,species) {
     for (dataIndex = 0; dataIndex < fishCount.length; dataIndex++) {
         if (fishCount[dataIndex]["Project"] == project) {
@@ -34,6 +40,18 @@ function addToArray (project,array,species) {
         }
     }
 }
+
+addToArray("BON", bvilleChinookArray, "Chinook");
+addToArray("BON", bvilleCohoArray, "Coho");
+addToArray("BON", bvilleSteelheadArray, "Steelhead");
+addToArray("TDA", dallesChinookArray, "Chinook");
+addToArray("TDA", dallesCohoArray, "Coho");
+addToArray("TDA", dallesSteelheadArray, "Steelhead");
+
+
+// needed for speciesSplit chart ///////////////////////////////////////////////
+var bvilleTotalArray        =   [];
+var dallesTotalArray        =   [];
 
 function addToTotalArray (project,array) {
     for (dataIndex = 0; dataIndex < fishCount.length; dataIndex++) {
@@ -43,7 +61,16 @@ function addToTotalArray (project,array) {
     }
 }
 
-function addToAnnualSplitArray(arrayTitle,species) {
+addToTotalArray("BON", bvilleTotalArray);
+addToTotalArray("TDA", dallesTotalArray);
+
+
+// needed for speciesSplit chart ///////////////////////////////////////////////
+var annualChinookPercent    =   [];
+var annualCohoPercent       =   [];
+var annualSteelheadPercent  =   [];
+
+function addToAnnualSplitArray (arrayTitle,species) {
     for (dataIndex = 0; dataIndex < fishCount.length; dataIndex++) {
         if (fishCount[dataIndex]["Project"] == "BON") {
             arrayTitle.push(Math.floor(100 * (fishCount[dataIndex][species] / bvilleTotalArray[dataIndex])));
@@ -51,16 +78,74 @@ function addToAnnualSplitArray(arrayTitle,species) {
     }
 }
 
+addToAnnualSplitArray(annualChinookPercent,"Chinook");
+addToAnnualSplitArray(annualCohoPercent,"Coho");
+addToAnnualSplitArray(annualSteelheadPercent,"Steelhead");
+
+
+//
 function addToDateArray (range) {
     var doubleRange = 2 * range;
     for (i = 0; i < doubleRange + 1; i++) {
         var newDay = (initialDate.valueOf() - (86400000 * range) + (86400000 * i));
-        var whatever = new Date(newDay);
-        var formatedDate = (whatever.getMonth() + 1) + '/' + whatever.getDate() + '/' +  whatever.getFullYear();
-        dateArray.push(formatedDate);
+        var date = new Date(newDay);
+        var formattedDate = ("0" + (date.getMonth() + 1)).slice(-2) + '/' + ("0" + date.getDate()).slice(-2) + '/' +  date.getFullYear();
+        dateArray.push(formattedDate);
     }
     console.log(dateArray);
+    console.log(dateArray.length);
 }
+
+function dateFormatOutput (initialDate) {
+    var date = new Date(initialDate);
+    var formattedDate = ("0" + (date.getMonth() + 1)).slice(-2) + '/' + ("0" + date.getDate()).slice(-2) + '/' +  date.getFullYear();
+    var monthToMatch = formattedDate.slice(0,2);
+    var dayToMatch = formattedDate.slice(3,5);
+    var yearToMatch = formattedDate.slice(6,10);
+    // console.log("Month: " + monthToMatch);
+    // console.log("Day: " + dayToMatch);
+    // console.log("Year: " + yearToMatch);
+}
+
+function padDate (dateString) {
+    return ("0" + dateString).slice(-2);
+}
+
+function addToMatchingDatesArray (monthToMatch,dayToMatch,yearToMatch) {
+    var matchingDatesArray = [];
+    for (i = 0; i < bonnevilleDailies.length; i++) {
+        var fullDate = new Date(bonnevilleDailies[i]["Date"]);
+        var month = padDate(fullDate.getMonth() + 1);
+        var day = padDate(fullDate.getDate());
+        // console.log(month, day);
+
+        if (padDate(month) == monthToMatch && padDate(day) == dayToMatch) {
+            matchingDatesArray.push(bonnevilleDailies[i]);
+        }
+    }
+    return matchingDatesArray;
+}
+
+var matchesFound = addToMatchingDatesArray("04","05","2016");
+
+function getTotals () {
+    for (i = 0; i < matchesFound.length; i++) {
+        var dailyTotal = matchesFound[i]["Chinook"] + matchesFound[i]["Coho"] + matchesFound[i]["Steelhead"]
+        dailyTotalArray.push(dailyTotal)
+    }
+}
+
+function getAverages () {
+    var dailyAverage = (dailyTotalArray.reduce(function(a, b) { return a + b; })) / dailyTotalArray.length;
+    // console.log(Math.floor(dailyAverage));
+    return dailyAverage;
+}
+
+
+
+
+
+
 
 // TODO find the matches for dateArray dates
 // TODO create constructor for date matches that compiles all date matches within the range, adds them together
@@ -69,26 +154,18 @@ function addToDateArray (range) {
 
 ////////////////////////////////////////////////////////////////////////////////
 
-// needed for speciesPerDamPerYear chart & speciesSplit chart
-addToYearArray();
 
-// needed for speciesPerDamPerYear chart
-addToArray("BON", bvilleChinookArray, "Chinook");       // Generates total of Chinook in Bonneville each year
-addToArray("BON", bvilleCohoArray, "Coho");             // Generates total number of Coho in Bonneville each year
-addToArray("BON", bvilleSteelheadArray, "Steelhead");   // Generates total number of Steelhead in Bonneville each year
-addToArray("TDA", dallesChinookArray, "Chinook");       // Generates total number of Chinook in The Dalles each year
-addToArray("TDA", dallesCohoArray, "Coho");             // Generates total number of Coho in The Dalles each year
-addToArray("TDA", dallesSteelheadArray, "Steelhead");   // Generates total number of Steelhead in The Dalles each year
 
-// needed for speciesSplit chart
-addToTotalArray("BON", bvilleTotalArray);               // Generates total number of ALL Salmon species in Bonneville each year
-addToTotalArray("TDA", dallesTotalArray);               // Generates total number of ALL Salmon species in The Dalles each year
-addToAnnualSplitArray(annualChinookPercent,"Chinook");  // Generates an array with the annual total of Chinook in Bonneville
-addToAnnualSplitArray(annualCohoPercent,"Coho");        // Generates an array with the annual total of Coho in Bonneville
-addToAnnualSplitArray(annualSteelheadPercent,"Steelhead");  // Generates an array with the annual total of Steelhead in Bonneville
+
 
 // needed for dailyComparisons chart
 addToDateArray(7);
+dateFormatOutput(initialDate);
+addToMatchingDatesArray("04","05","2016");
+getTotals();
+getAverages();
+
+
 
 //////////////////////////////// CHART CREATION ////////////////////////////////
 
@@ -99,12 +176,12 @@ function speciesPerDamPerYear(maximum) {
     }
 
     $(function () {
-        $('#speciesPerDamPerYear').highcharts({
+        $("#chartContainer").highcharts({
             chart: {
-                type: 'column',
+                type: "column",
             },
             title: {
-                text: 'Annual Salmon Count'
+                text: "Annual Salmon Count"
             },
             xAxis: {
                 categories: yearArray
@@ -112,7 +189,7 @@ function speciesPerDamPerYear(maximum) {
             yAxis: {
                 min: 0,
                 title: {
-                    text: 'Salmon Counted'
+                    text: "Salmon Counted"
                 },
                 stackLabels: {
                     enabled: false
@@ -173,7 +250,7 @@ function speciesSplit(year) {
         });
         var chart;
 
-        $('#speciesSplit').highcharts({
+        $('#chartContainer').highcharts({
             chart: {
                 type: 'pie',
             },
@@ -219,74 +296,74 @@ function speciesSplit(year) {
 }
 
 // function dailyComparisons() {
-    // function numberWithCommas(number) {
-    //     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    // }
-
-    $(function () {
-        $('#dailyComparisons').highcharts({
-            chart: {
-                type: 'area',
-                spacingBottom: 30
-            },
-            title: {
-                text: 'Fruit consumption *'
-            },
-            subtitle: {
-                text: '* Jane\'s banana consumption is unknown',
-                floating: true,
-                align: 'right',
-                verticalAlign: 'bottom',
-                y: 15
-            },
-            legend: {
-                layout: 'vertical',
-                align: 'left',
-                verticalAlign: 'top',
-                x: 150,
-                y: 100,
-                floating: true,
-                borderWidth: 1,
-                backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
-            },
-            xAxis: {
-                categories: dateArray
-            },
-            yAxis: {
-                title: {
-                    text: 'Y-Axis'
-                },
-                labels: {
-                    formatter: function () {
-                        return this.value;
-                    }
-                }
-            },
-            tooltip: {
-                formatter: function () {
-                    return '<b>' + this.series.name + '</b><br/>' +
-                        this.x + ': ' + this.y;
-                }
-            },
-            plotOptions: {
-                area: {
-                    fillOpacity: 0.5
-                }
-            },
-            credits: {
-                enabled: false
-            },
-            series: [{
-                name: 'John',
-                data: [0, 1, 4, 4, 5, 2, 3, 7]
-            }, {
-                name: 'Jane',
-                data: [1, 0, 3, 5, 6, null, null, null]
-            }]
-        });
-    });
-};
+//     function numberWithCommas(number) {
+//         return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+//     }
+//
+//     $(function () {
+//         $('#chartContainer').highcharts({
+//             chart: {
+//                 type: 'area',
+//                 spacingBottom: 30
+//             },
+//             title: {
+//                 text: 'Fruit consumption *'
+//             },
+//             subtitle: {
+//                 text: '* Jane\'s banana consumption is unknown',
+//                 floating: true,
+//                 align: 'right',
+//                 verticalAlign: 'bottom',
+//                 y: 15
+//             },
+//             legend: {
+//                 layout: 'vertical',
+//                 align: 'left',
+//                 verticalAlign: 'top',
+//                 x: 150,
+//                 y: 100,
+//                 floating: true,
+//                 borderWidth: 1,
+//                 backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+//             },
+//             xAxis: {
+//                 categories: dateArray
+//             },
+//             yAxis: {
+//                 title: {
+//                     text: 'Y-Axis'
+//                 },
+//                 labels: {
+//                     formatter: function () {
+//                         return this.value;
+//                     }
+//                 }
+//             },
+//             tooltip: {
+//                 formatter: function () {
+//                     return '<b>' + this.series.name + '</b><br/>' +
+//                         this.x + ': ' + this.y;
+//                 }
+//             },
+//             plotOptions: {
+//                 area: {
+//                     fillOpacity: 0.5
+//                 }
+//             },
+//             credits: {
+//                 enabled: false
+//             },
+//             series: [{
+//                 name: 'John',
+//                 data: [0, 1, 4, 4, 5, 2, 3, 7]
+//             }, {
+//                 name: 'Jane',
+//                 data: [1, 0, 3, 5, 6, null, null, null]
+//             }]
+//         });
+//     });
+// };
 
 // speciesPerDamPerYear(10);   // pass it a range: 10, 25, 50
 // speciesSplit(0);            // pass it an year: 0 = 2014, 1 = 2013 ...
-// dailyComparisons(7);        // pass it a range: 7, 30, 365
+// dailyComparisons(7);        // pass it a range: 7, 30, 182
