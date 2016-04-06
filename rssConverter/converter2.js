@@ -7,6 +7,7 @@
 /*==============================
       Global variables:
 ===============================*/
+var fishDate = new Date(); // sets a timestamp to first loading of pagge, then triggers a rss-update every 4 hours
 
 var rssData = [];  // should make an array with 4 objects [{Willamette Falls}, {Bonneville Dam}, {The Dalles Dam}, {John Day Dam}]
 
@@ -45,6 +46,7 @@ google.load("feeds", "1");
 //****** Function returns an Array with objects from the RSS-Feed:
 
 function initialize() {
+      console.log("RSS-Feed first updated at: ", fishDate);
 
       var feed = new google.feeds.Feed("http://www.fpc.org/rss/rssAdultCounts.aspx");
 
@@ -63,14 +65,14 @@ function initialize() {
           makeProjectDate(rawData, chinookCohoData);
           makeChinookCoho(rawData, chinookCohoData);
 
-          console.log('Test 1 --- chinookCohoData:  ', chinookCohoData);
+          console.log('Current RSS-Feed Data --- chinookCohoData:  ', chinookCohoData);
 
           // calc total fish passed Bonneville Dam:
           fishCount = parseInt(chinookCohoData[0].Chinook) + parseInt(chinookCohoData[0].Coho);
 
           // display fishCount:
           var fishCountId = document.getElementById('fishCount');  // to display fishCount in the html
-          fishCountId.textContent = 'Today ' + fishCount + ' Salmon passed the Bonneville dam.';
+          fishCountId.textContent = 'Yesterday ' + fishCount + ' Salmon passed the Bonneville dam.';
 
           } // if close
 
@@ -107,8 +109,6 @@ function makeStripData (array1, array2) {
 
 //****** STEP 2 --- turn title-property from rawData into new project- and date-properties in chinookCohoData-Objects:
 function makeProjectDate(array1, array2) {   // array1 = rawData, array2 = chinookCohoData
-    console.log('inside makeProjectDate - rawData - array1: ', array1);
-    console.log('inside makeProjectDate - chinookCohoData - array2: ', array2);
 
     for (var i = 0; i < array2.length; i++) {
 
@@ -136,19 +136,16 @@ function makeChinookCoho(array1, array2) {    // array1 = rawData, array2 = chin
 
         var contentSplit = array1[i][1].split("; ");    // this accesses the content info in rawData at index [1],
                                                        // contentSplit is now an array ["Chinook Adult 90", "Chinook Jack 2"....]
-           console.log('inside makeChinookCoho - array1.length:', array1.length);
-           console.log('inside makeChinookCoho - array2.length:', array2.length);
-           console.log('inside makeChinookCoho - contentSplit.length:', contentSplit.length);
 
         for (var k = 0; k < contentSplit.length; k++) {     // lops through contentSplit-Array
             var x = contentSplit[k].split(" ");     // creates array with ["Chinook", "Adult", "90"]
 
                 if (x[0] == "Chinook" && x[1] == "Adult") {     // if x[0] is either ("Chinook" && "Adult") or ("Coho" && "Adult") pop off the number...
-                    array2[i].Chinook = x.pop();
+                    array2[i].Chinook = parseInt(x.pop());
                 } else if (x[0] == "Coho" && x[1] == "Adult") {
-                    array2[i].Coho = x.pop();
+                    array2[i].Coho = parseInt(x.pop());
                 } else if (x[0] == "Steelhead") {
-                    array2[i].Steelhead = x.pop();
+                    array2[i].Steelhead = parseInt(x.pop());
                 }
         } // inner for-loop close
 
@@ -160,6 +157,15 @@ function makeChinookCoho(array1, array2) {    // array1 = rawData, array2 = chin
 
 
 /*==============================================================
-             Functions to display fishCount in html:
-                         id="fishCount"
+     Function to run initialize() each day at 1200 hours
 ===============================================================*/
+
+
+function updateRSS () {
+    setInterval(initialize, 1000 * 60 * 60 * 4);  // runs Initialize ever 4 hours from first load
+}
+
+updateRSS();
+
+
+//
