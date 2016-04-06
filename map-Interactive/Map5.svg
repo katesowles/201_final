@@ -5,21 +5,22 @@
 <style type="text/css">
 	.st0{fill:none;stroke:#000000;stroke-miterlimit:10;}
 	.st1{fill:#FFCCCC;stroke:#FF8888;stroke-miterlimit:10;}
-	.st2{font-family:'MyriadPro-Regular';}
+	.st2{font-family:'Helvetica';}
 	.st3{font-size:12px;}
 	.st4{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
-	.st5{fill:none;stroke:#5A829C;stroke-width:0.5;stroke-linecap:round;stroke-miterlimit:10;}
-	.st6{fill:none;stroke:#5A829C;stroke-linecap:round;stroke-miterlimit:10;}
-	.st7{fill:#9EBBCB;stroke:#5A829C;stroke-miterlimit:10;}
-	.st8{fill:#FFFFFF;stroke:#5A829C;stroke-miterlimit:10;}
-	.st9{fill:#FFFFFF;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
-	.st10{fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
-	.st11{fill:#9EBBCB;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
-	.st12{fill:#FF8888;stroke:#000000;stroke-miterlimit:10;}
-	.st13{fill:none;}
-	.st14{font-size:14px;}
-	.st15{letter-spacing:1;}
-	.st16{font-size:18px;}
+	.st5{font-size:14.3657px;}
+	.st6{fill:none;stroke:#5A829C;stroke-width:0.5;stroke-linecap:round;stroke-miterlimit:10;}
+	.st7{fill:none;stroke:#5A829C;stroke-linecap:round;stroke-miterlimit:10;}
+	.st8{fill:#9EBBCB;stroke:#5A829C;stroke-miterlimit:10;}
+	.st9{fill:#FFFFFF;stroke:#5A829C;stroke-miterlimit:10;}
+	.st10{fill:#FFFFFF;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
+	.st11{fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
+	.st12{fill:#9EBBCB;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
+	.st13{fill:#FF8888;stroke:#000000;stroke-miterlimit:10;}
+	.st14{fill:none;}
+	.st15{font-size:14px;}
+	.st16{letter-spacing:1;}
+	.st17{font-size:18px;}
 </style>
 <g id="towns_and_roads">
 	<polyline class="st0" points="1372,495.3 1318.9,421.3 1290.7,299.3 1220.8,235.3 1053.3,160.7 886,160.7 785.3,117.7 502,165.3 
@@ -28,7 +29,7 @@
 	<path class="st1" d="M1229.7,349.3c-0.3,1-17,26-17,26l33.5,57.6l33.5,6.1l37.3-15l16.7-24l-47.8-36.3L1229.7,349.3z"/>
 	<polygon class="st1" points="718.7,157.4 722.6,178.3 736.9,186 751.9,190.5 755.6,205.4 764,205.4 780.3,208 793.8,194.4 
 		800.5,182.7 808,178.3 808,164.6 791.8,157.4 751.9,145.1 	"/>
-	<text transform="matrix(1 0 0 1 694.0002 199.8335)" class="st2 st3">Hood River</text>
+	<text transform="matrix(1 0 0 1 683.3335 209.164)" class="st2 st3">Hood River</text>
 	<text transform="matrix(1 0 0 1 1196.0001 446.3647)" class="st2 st3">The Dalles</text>
 	<polyline class="st0" points="780.3,208 780.3,335.5 700.5,484 	"/>
 	<rect x="736.9" y="380" class="st4" width="28.6" height="20"/>
@@ -37,27 +38,27 @@
 	<rect x="538.3" y="209.2" class="st4" width="28.6" height="20"/>
 	<text transform="matrix(1 0 0 1 546.4435 223.2413)" class="st2 st3">84</text>
 	<rect x="165.7" y="207.2" class="st4" width="28.6" height="20"/>
-	<text transform="matrix(1 0 0 1 173.7769 221.3075)" class="st2 st3">14</text>
+	<text transform="matrix(0.8353 0 0 1 172.4141 221.7163)" class="st2 st5">14</text>
 	<rect x="910.6" y="147.4" class="st4" width="28.6" height="20"/>
-	<text transform="matrix(1 0 0 1 918.6667 161.486)" class="st2 st3">14</text>
+	<text transform="matrix(1 0 0 1 917.6667 161.486)" class="st2 st3">14</text>
 	<rect x="1290.7" y="326.5" class="st4" width="28.6" height="20"/>
-	<text transform="matrix(1 0 0 1 1295.7605 340.5625)" class="st2 st3">197</text>
+	<text transform="matrix(1 0 0 1 1294.7605 340.5625)" class="st2 st3">197</text>
 	<rect x="1192.2" y="380" class="st4" width="28.6" height="20"/>
-	<text transform="matrix(1 0 0 1 1200.2552 394.0774)" class="st2 st3">84</text>
+	<text transform="matrix(0.7665 0 0 1 1200.2559 394.0771)" class="st2 st3">84</text>
 	<line class="st0" x1="1290.7" y1="299.3" x2="1452" y2="242"/>
 </g>
 <g id="columbia-river">
-	<path class="st5" d="M350.2,117.3c-0.2-0.2-6.1-5.9-7.2-7.7c-1.1-1.8-4.6-3.8-6.3-5.2c-1.7-1.4-3.5-2.8-3.2-3.8
+	<path class="st6" d="M350.2,117.3c-0.2-0.2-6.1-5.9-7.2-7.7c-1.1-1.8-4.6-3.8-6.3-5.2c-1.7-1.4-3.5-2.8-3.2-3.8
 		c0.2-1.1,1.4-3.6,2.3-5c0.9-1.4,0.5-1.2-0.1-4.2s-1.3-4.7-2.5-6.4c-1.5-2.2-0.5-4.8-0.8-6.3c-0.3-1.5-3.5-1-4.9-0.5
 		c-1.5,0.5-6,0.1-7.5-0.6c-1.5-0.7-5.5-3.9-6.5-5.2c-1-1.3-1.6-5-2.6-6.5s-2.1-1.8-3.1-2.1"/>
-	<path class="st5" d="M735.2,38.2c-0.2-1-0.3-1.9-0.3-3.7c0.1-1.8,0.3-2.6,1-3.4s0.6-1,0.7-3s-0.4-2.7-1-4.5s-1.4-5.7-1.1-6.4
+	<path class="st6" d="M735.2,38.2c-0.2-1-0.3-1.9-0.3-3.7c0.1-1.8,0.3-2.6,1-3.4s0.6-1,0.7-3s-0.4-2.7-1-4.5s-1.4-5.7-1.1-6.4
 		s2-1.4,2.4-1.9"/>
-	<path class="st5" d="M775.7,222.2c0.1,0.8,0.5,5,0.1,6.5s-2.2,5.1-2.5,6.3s-8.2,16.6-8.9,17.9s-0.8,4.2-2.4,5.4s-1.9,6.8-5.2,7.1
+	<path class="st6" d="M775.7,222.2c0.1,0.8,0.5,5,0.1,6.5s-2.2,5.1-2.5,6.3s-8.2,16.6-8.9,17.9s-0.8,4.2-2.4,5.4s-1.9,6.8-5.2,7.1
 		s-4.7,1.2-6.7,3.1s-2.5,3.6-4,3.9s-3.8-2.3-4.9-2.7s-2.2-0.7-3,1.2s-0.6,4.2-0.8,6.3s-2.4,4.5-4.8,6.3s-4,1.3-4.8,1.5"/>
-	<path class="st6" d="M217.2,352.9c0,0,6.3,14.8,7.8,17.8s2.2,6,5.5,8.2s9.5,17,10.8,19.2s11.5,20.2,16.2,20.5s13.8,6.2,15,9.8"/>
-	<path class="st6" d="M242.3,400c0.8,5.9-1.1,16-0.6,19.6s0.4,4.4-1.1,10.9s-4.9,11.8-4.9,11.8s-3.6,6.4-4.1,8.6S230,458,230,458"/>
+	<path class="st7" d="M217.2,352.9c0,0,6.3,14.8,7.8,17.8s2.2,6,5.5,8.2s9.5,17,10.8,19.2s11.5,20.2,16.2,20.5s13.8,6.2,15,9.8"/>
+	<path class="st7" d="M242.3,400c0.8,5.9-1.1,16-0.6,19.6s0.4,4.4-1.1,10.9s-4.9,11.8-4.9,11.8s-3.6,6.4-4.1,8.6S230,458,230,458"/>
 	<g>
-		<path class="st7" d="M1447,271.5c-2.5,0.2-13.5,8-13.5,8s-7,4-12.5,1.5s-9.1-0.4-13.6,1.2c-4.3,1.5-9,5.4-12.7,9.6
+		<path class="st8" d="M1447,271.5c-2.5,0.2-13.5,8-13.5,8s-7,4-12.5,1.5s-9.1-0.4-13.6,1.2c-4.3,1.5-9,5.4-12.7,9.6
 			c-2.2,2.5-6.3,7.8-10.2,11.2s-5.2,4.8-8,4.5s-4.4-7.5-6-8s-2.1-0.1-3,2s0,4,0,9s1.2,7.8-3,14.5s-12.2,6.4-17.5,11.5
 			s-8.1,10.1-14,13s-12.5,9.5-15.5,12.5s-7.6,10.2-14,15.5s-13.1,2.9-18.5,3.9c-4,0.7-12.9,2.3-20.2,2.1c-5.6-0.2-15.6-3.6-18.5-6.8
 			c-4-4.4-8.3-6.3-9.8-11.2s2-12.5,2.5-17.5s0.5-13,0-16s-1.8-7.2-4.5-12.6c-1.1-2.2,1.9-8.2-0.2-23.1c-0.3-2.2-4.6-14-8.6-22.5
@@ -125,23 +126,23 @@
 			c0.2,5.6,0.4,8.4,1.4,11.4s3.9,6.2,9.6,11.6s11.1,11.1,17.5,13.5c5.7,2.1,17.3,4.7,21.8,4.5c11.4-0.6,16-3.4,19.5-5.4
 			s9.6-7.4,14.8-6.1s13.5-3,17-4.3s8-8.7,9.5-12.2s5.4-7,6.9-9s6.1-4.5,7.6-6s6-8,7.5-11s6.4-12.5,13-18.1s11-6.8,15-9.8
 			s12.7-9.5,20.5-12.6c3.1-1.3,16.8-5.1,25-6s15.5,0,15.5,0v-28C1452,271.5,1449.5,271.3,1447,271.5z"/>
-		<path class="st7" d="M350.8,118.3c-0.2-0.4-0.3-0.7-0.5-0.9C349.9,116.9,350.2,117.5,350.8,118.3z"/>
+		<path class="st8" d="M350.8,118.3c-0.2-0.4-0.3-0.7-0.5-0.9C349.9,116.9,350.2,117.5,350.8,118.3z"/>
 	</g>
-	<path class="st6" d="M283.1,313.1c1.5,3.2,7.3,7.3,9.4,12.6c2.1,5.3,5.8,4.1,11.7,6.6c5.8,2.5,12.2-1.8,15.2,1.7"/>
+	<path class="st7" d="M283.1,313.1c1.5,3.2,7.3,7.3,9.4,12.6c2.1,5.3,5.8,4.1,11.7,6.6c5.8,2.5,12.2-1.8,15.2,1.7"/>
 </g>
 <g id="islands">
-	<path class="st8" d="M37.3,361.2c-0.4-2.5-0.8-3.3,2-6.5s5.2-5.8,8-5.4c2.8,0.3,3.4,1.3,4.6,0.9c1.2-0.4,1.8-2.2,3-1.7
+	<path class="st9" d="M37.3,361.2c-0.4-2.5-0.8-3.3,2-6.5s5.2-5.8,8-5.4c2.8,0.3,3.4,1.3,4.6,0.9c1.2-0.4,1.8-2.2,3-1.7
 		s2.5,0.3,2.3,2.4s-0.3,5.2,1.3,5.8c1.7,0.5,4.1-0.4,4.2,0.8s0.4,1.8-1.9,2.9c-2.3,1.2-4.1,2.7-5.7,2.7c-1.6,0-5.8,0.8-6.5,0
 		s0.4-0.9,0.2-2.1c-0.2-1.2-0.2-2.4-1.5-1.8c-1.3,0.7-3.9,2.4-6,2.8C39.2,362.6,37.8,364.2,37.3,361.2z"/>
-	<path class="st8" d="M63.7,351.8c-0.7,2,0.1,3.2,1.2,4.7c1.2,1.5,1.8,2.2,3.2,1.8s2.5-1.3,4.1-2.2c1.6-0.8,4.2-2.9,6.1-3.1
+	<path class="st9" d="M63.7,351.8c-0.7,2,0.1,3.2,1.2,4.7c1.2,1.5,1.8,2.2,3.2,1.8s2.5-1.3,4.1-2.2c1.6-0.8,4.2-2.9,6.1-3.1
 		c1.9-0.2,2.8-0.2,3-1.2s0.8-2.7-0.5-3.5s-5.2-1.2-6.8-0.8s-4,0.2-5.9,1.5C66.2,350.2,64.3,349.9,63.7,351.8z"/>
-	<path class="st8" d="M133.7,306.2c-3.4,3-4,2.5-3.4,3.7s1.8,1.2,4,0.6s3.7-0.4,5-0.1c1.3,0.4,3.6,0.8,3.6,0.8s2.1,0.7,4.5,0.8
+	<path class="st9" d="M133.7,306.2c-3.4,3-4,2.5-3.4,3.7s1.8,1.2,4,0.6s3.7-0.4,5-0.1c1.3,0.4,3.6,0.8,3.6,0.8s2.1,0.7,4.5,0.8
 		c2.4,0.1,4.1-0.5,4.1-0.5l4.4-2.2c0,0,3.6-0.7,0-1.2s-8.7-1.9-10.5-1.1c-1.8,0.7-2.1,0.5-4.1-0.1s-1.3-0.8-3.2-1
 		C136.3,305.6,134.2,305.8,133.7,306.2z"/>
-	<path class="st8" d="M139.2,298.4c-1.6,1.2-2.5,2-2.9,2.6c-0.4,0.6,1.5,1.4,4.5,1.4c3,0,3.1,0.8,5,0.3s1-2.4,3.1-0.9
+	<path class="st9" d="M139.2,298.4c-1.6,1.2-2.5,2-2.9,2.6c-0.4,0.6,1.5,1.4,4.5,1.4c3,0,3.1,0.8,5,0.3s1-2.4,3.1-0.9
 		c2.1,1.5,2.1,2.2,3,1.9c0.9-0.3,1.3-1.1,1.3-1.1l-0.8-2.2c0,0-0.5-2.6-1.2-3c-0.7-0.3-4.8-1.2-5.8-1.1
 		C144.1,296.6,141.9,296.5,139.2,298.4z"/>
-	<path class="st8" d="M134.6,316.3c-2.4,0.5-4-0.5-4.8,2.7c-0.8,3.2-0.9,4.5-0.8,5.2c0.2,0.7,3.5-0.8,3.5-0.8s4.4-3.4,6.1-3.8
+	<path class="st9" d="M134.6,316.3c-2.4,0.5-4-0.5-4.8,2.7c-0.8,3.2-0.9,4.5-0.8,5.2c0.2,0.7,3.5-0.8,3.5-0.8s4.4-3.4,6.1-3.8
 		c1.8-0.5,5.8-0.1,7.5-0.5s3.1-1.8,0.9-2.7c-2.2-0.9-5.7-0.8-9-0.4C134.6,316.3,134.6,316.3,134.6,316.3z"/>
 </g>
 <g id="dam">
@@ -149,46 +150,46 @@
 		<rect x="99.6" y="303.6" transform="matrix(0.1104 -0.9939 0.9939 0.1104 -180.558 414.4495)" class="st4" width="83.2" height="9.1"/>
 </g>
 <g id="frames">
-	<rect x="23.1" y="70.2" class="st9" width="194" height="74.8"/>
-	<rect x="307.8" y="395.1" class="st9" width="230.6" height="74.8"/>
-	<rect x="408.3" y="279" class="st9" width="230.6" height="74.8"/>
-	<rect x="835.7" y="316.4" class="st9" width="206.9" height="74.8"/>
-	<polyline class="st10" points="23.1,145.1 23.1,289.4 144.8,289.4 	"/>
-	<line class="st11" x1="307.8" y1="395.1" x2="185.2" y2="315.6"/>
-	<polyline class="st10" points="408.3,279 408.3,252.3 254.7,252.3 	"/>
-	<polyline class="st10" points="1007.4,315.6 1007.4,104.9 1190.8,104.9 	"/>
+	<rect x="23.1" y="70.2" class="st10" width="206.9" height="74.8"/>
+	<rect x="307.8" y="395.1" class="st10" width="241.4" height="74.8"/>
+	<rect x="408.3" y="279" class="st10" width="235.9" height="74.8"/>
+	<rect x="835.7" y="316.4" class="st10" width="223.9" height="74.8"/>
+	<polyline class="st11" points="23.1,145.1 23.1,289.4 144.8,289.4 	"/>
+	<line class="st12" x1="307.8" y1="395.1" x2="185.2" y2="315.6"/>
+	<polyline class="st11" points="408.3,279 408.3,252.3 254.7,252.3 	"/>
+	<polyline class="st11" points="1007.4,315.6 1007.4,104.9 1190.8,104.9 	"/>
 </g>
 <g id="circles">
-	<circle class="st12" cx="144.8" cy="289.4" r="12.8"/>
-	<circle class="st12" cx="185.2" cy="315.6" r="12.8"/>
-	<circle class="st12" cx="254.7" cy="252.3" r="12.8"/>
-	<circle class="st12" cx="1190.8" cy="104.9" r="12.8"/>
+	<circle class="st13" cx="144.8" cy="289.4" r="12.8"/>
+	<circle class="st13" cx="185.2" cy="315.6" r="12.8"/>
+	<circle class="st13" cx="254.7" cy="252.3" r="12.8"/>
+	<circle class="st13" cx="1190.8" cy="104.9" r="12.8"/>
 </g>
 <g id="labels">
-	<path id="SVGID_x5F_1_x5F_" class="st13" d="M383.7,129.6c146.1-2.2,216-12.5,291.3-33.8c54.6-15.5,158.4-18.1,219,29.9"/>
-	<text>	<textPath  xlink:href="#SVGID_x5F_1_x5F_" startOffset="7.8125%">
-<tspan  class="st2" style="font-size:24px; letter-spacing:400;">COLUMBIA RIVER GORGE</tspan>	</textPath>
+	<path id="SVGID_x5F_1_x5F_" class="st14" d="M383.7,129.6c146.1-2.2,216-12.5,291.3-33.8c54.6-15.5,158.4-18.1,219,29.9"/>
+	<text>	<textPath  xlink:href="#SVGID_x5F_1_x5F_" startOffset="2.1033%">
+<tspan  class="st2" style="font-size:24px; letter-spacing:200;">COLUMBIA RIVER GORGE</tspan>	</textPath>
 </text>
 	<polygon class="st4" points="145.8,452 44.8,452 44.8,443.4 30,453.5 44.8,463.7 44.8,455.6 145.8,455.1 	"/>
-	<text transform="matrix(1 0 0 1 58.0703 443.3652)" class="st2 st14 st15">To Portland</text>
+	<text transform="matrix(1 0 0 1 58.0703 443.3652)" class="st2 st15 st16">To Portland</text>
 	<polygon class="st4" points="1309.5,205.7 1410.6,205.7 1410.6,197.1 1425.4,207.2 1410.6,217.4 1410.6,209.3 1309.5,208.8 	"/>
-	<text transform="matrix(1 0 0 1 37.0839 104.9151)"><tspan x="0" y="0" class="st2 st16 st15">BONNEVILLE DAM</tspan><tspan x="0" y="21.6" class="st2 st16 st15">Fish-Ladder</tspan></text>
-	<text transform="matrix(1 0 0 1 329.0208 428.5)"><tspan x="0" y="0" class="st2 st16 st15">EAGLE CREEK</tspan><tspan x="0" y="21.6" class="st2 st16 st15">Footbridge and pools</tspan></text>
-	<text transform="matrix(1 0 0 1 860.8094 349.8036)"><tspan x="0" y="0" class="st2 st16 st15">KLICKITAT RIVER</tspan><tspan x="0" y="21.6" class="st2 st16 st15">Falls</tspan></text>
-	<text transform="matrix(1 0 0 1 428.2837 310.381)"><tspan x="0" y="0" class="st2 st16 st15">HERMAN CREEK</tspan><tspan x="0" y="21.6" class="st2 st16 st15">Footbridge and pools</tspan></text>
-	<path id="SVGID_x5F_2_x5F_" class="st13" d="M159,334c22,32.5,28.2,19,41,56.2s5.2,56.4,5.2,56.4"/>
-	<text>	<textPath  xlink:href="#SVGID_x5F_2_x5F_" startOffset="1.2115%">
-<tspan  class="st2 st16" style="letter-spacing:100;">EAGLE CREEK</tspan>	</textPath>
+	<text transform="matrix(1 0 0 1 37.0839 104.9151)"><tspan x="0" y="0" class="st2 st17 st16">BONNEVILLE DAM</tspan><tspan x="0" y="21.6" class="st2 st17 st16">Fish-Ladder</tspan></text>
+	<text transform="matrix(1 0 0 1 329.0208 428.5)"><tspan x="0" y="0" class="st2 st17 st16">EAGLE CREEK</tspan><tspan x="0" y="21.6" class="st2 st17 st16">Footbridge and pools</tspan></text>
+	<text transform="matrix(1 0 0 1 860.8094 349.8036)"><tspan x="0" y="0" class="st2 st17 st16">KLICKITAT RIVER</tspan><tspan x="0" y="21.6" class="st2 st17 st16">Falls</tspan></text>
+	<text transform="matrix(1 0 0 1 428.2837 310.381)"><tspan x="0" y="0" class="st2 st17 st16">HERMAN CREEK</tspan><tspan x="0" y="21.6" class="st2 st17 st16">Footbridge and pools</tspan></text>
+	<path id="SVGID_x5F_2_x5F_" class="st14" d="M159,334c22,32.5,28.2,19,41,56.2s5,83.8,5,83.8"/>
+	<text>	<textPath  xlink:href="#SVGID_x5F_2_x5F_" startOffset="0.7935%">
+<tspan  class="st2 st17" style="letter-spacing:25;">EAGLE CREEK</tspan>	</textPath>
 </text>
-	<path id="SVGID_x5F_3_x5F_" class="st13" d="M223.6,265.5c10.4,9.3,20.2,13.2,25.2,23.5s-2.7,25.8,29.5,58
+	<path id="SVGID_x5F_3_x5F_" class="st14" d="M223.6,265.5c10.4,9.3,20.2,13.2,25.2,23.5s-2.7,25.8,29.5,58
 		c10.4,10.5,50.4,24.1,64.2,27.5"/>
 	<text>	<textPath  xlink:href="#SVGID_x5F_3_x5F_" startOffset="1.172%">
-<tspan  class="st2 st16" style="letter-spacing:98.5;">HERMAN CREEK</tspan>	</textPath>
+<tspan  class="st2 st17" style="letter-spacing:24.6;">HERMAN CREEK</tspan>	</textPath>
 </text>
-	<path id="SVGID_x5F_4_x5F_" class="st13" d="M1141.2,200.3c41-24.8,54.6-27.8,79.3-75.3c9.7-18.7,47-29.5,51.2-54.8"/>
+	<path id="SVGID_x5F_4_x5F_" class="st14" d="M1141.2,200.3c41-24.8,54.6-27.8,79.3-75.3c9.7-18.7,47-29.5,51.2-54.8"/>
 	<text>	<textPath  xlink:href="#SVGID_x5F_4_x5F_" startOffset="2.463%">
-<tspan  class="st2 st16" style="letter-spacing:100;">KLICKITAT RIVER</tspan>	</textPath>
+<tspan  class="st2 st17" style="letter-spacing:25;">KLICKITAT RIVER</tspan>	</textPath>
 </text>
-	<text transform="matrix(1 0 0 1 1326.7008 197.0793)" class="st2 st14">Up - River</text>
+	<text transform="matrix(1 0 0 1 1326.7008 197.0793)" class="st2 st15">Up - River</text>
 </g>
 </svg>
