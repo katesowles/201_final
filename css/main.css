@@ -87,10 +87,10 @@ img {
   padding: 40px 30px;
 }
 
-.bonnevilleDam,
-.eagleCreekTrailhead,
-.klickitatRiverFalls,
-.hermanCreekTrailhead {
+#bonnevilleDam,
+#eagleCreekTrailhead,
+#klickitatRiverFalls,
+#hermanCreekTrailhead {
   border: 2px solid;
   padding: 25px;
   margin: 10px auto;
