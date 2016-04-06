@@ -2,7 +2,8 @@
 <html lang="eng">
   <head>
     <meta charset="utf-8"></meta>
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlamminSalmon!</title>
     <script src="https://code.jquery.com/jquery-2.2.2.js" integrity="sha256-4/zUCqiq0kqxhZIyp4G0Gk+AOtCJsY1TA00k5ClsZYE=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/normalize.css"></link>
     <link rel="stylesheet" href="css/skeleton.css"></link>
@@ -21,18 +22,36 @@
         <h2>PAGE TWO (charts)</h2>
         <div id="speciesPerDamPerYear"></div>
         <div id="speciesSplit"></div>
-        <div id="currentVsHistoricalDalies"></div>
+        <div id="dailyComparisons"></div>
     </div>
     <div class="pageThree">
         <h2>PAGE THREE (contact/geolocate)</h2>
+        <div id="error">You need JavaScript enabled for this application to work</div>
+        <h1>Geolocation</h1>
+        <div class="wrapper">
+          <div class="graphic">
+            <img src="img/salmonLogoOne.svg" alt="Slamon Logo" />
+          </div>
+          <div id="viewSpots">
+            <h1>Fish Viewing Spots</h1>
+            <p id="load">Aquiring Location<br /><img src="img/ring-alt.gif" alt="Progress bar"></p>
+            <ul>
+              <li><span data-lat="45.644276" data-lon="-121.940634" class="getSpan">? miles to</span> Bonnaville Dam</li>
+              <li><span data-lat="45.613993" data-lon="-121.134115" class="getSpan">? miles to</span> Dalles Dam</li>
+              <li><span data-lat="45.640337" data-lon="-121.928959" class="getSpan">? miles to</span> Eagle Creek</li>
+            </ul>
+          </div>
+        </div>
     </div>
     <div class="footer">
       <footer>
         <h2>testTwo!</h2>
       </footer>
     </div>
+    <script src="js/calcDistance.js"></script>
     <script src="js/highcharts.js"></script>
-    <script src="data/historicalAnnualData.json"></script> <!-- REPLACE WITH HISTORIALANNUALDATA.JSON ONCE WE'RE READY FOR THE FULL DATA SET -->
+    <script src="data/historicalAnnualData.json"></script>
+    <script src="data/dailydataThrough1966REDUCED.json"></script>
     <script src="js/chartGeneration.js"></script>
   </body>
 </html>
