@@ -17,17 +17,17 @@ var rawData = [];
 var damsArray = [];
 var chinookCohoData =[
                 {                       // Object[0] = Bonneville Dam
-                    project: "empty",
-                    year: 2016,
-                    date: "empty",
+                    Project: "empty",
+                    Year: 2016,
+                    Date: "empty",
                     Chinook: 0,
                     Coho: 0,
                     Steelhead: 0
                 },
                 {                       // Object[1] = The Dalles Dam
-                    project: "empty",
-                    year: 2016,
-                    date: "empty",
+                    Project: "empty",
+                    Year: 2016,
+                    Date: "empty",
                     Chinook: 0,
                     Coho: 0,
                     Steelhead: 0
@@ -116,12 +116,12 @@ function makeProjectDate(array1, array2) {   // array1 = rawData, array2 = chino
         var titleSplit = array1[i][0].split(" ");  // this accesses the title info in rawData at index [0]
 
         if (titleSplit[0] == "BONNEVILLE") {
-            array2[i].project = "BON";
+            array2[i].Project = "BON";
         } else {
-            array2[i].project = "TDA";
+            array2[i].Project = "TDA";
         }
 
-        array2[i].date = titleSplit.pop();  // pops off last item (which should be date string "mm/dd/yyy")
+        array2[i].Date = titleSplit.pop();  // pops off last item (which should be date string "mm/dd/yyy")
     }  // for-loop close
 
 } // makeProjectDate() close
@@ -153,7 +153,6 @@ function makeChinookCoho(array1, array2) {    // array1 = rawData, array2 = chin
     }  // for-loop close
 
 } // makeChinookCoho() close
-
 
 
 
