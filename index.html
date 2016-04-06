@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="eng">
-  <head>
+
+<head>
     <meta charset="utf-8"></meta>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SlamminSalmon!</title>
@@ -8,12 +9,15 @@
     <link rel="stylesheet" href="css/normalize.css"></link>
     <link rel="stylesheet" href="css/skeleton.css"></link>
     <link rel="stylesheet" href="css/main.css"></link>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="header">
-      <header>
-        <a href="#"><h1>test!</h1></a>
-      </header>
+        <header>
+            <a href="#">
+                <h1>test!</h1>
+            </a>
+        </header>
     </div>
     <div class="pageOne">
         <h2>PAGE ONE (map)</h2>
@@ -28,33 +32,54 @@
         <div id="error">You need JavaScript enabled for this application to work</div>
         <h1>Geolocation</h1>
         <div class="wrapper">
-          <div class="graphic">
-            <img src="img/salmonLogoOne.svg" alt="Slamon Logo" />
-          </div>
-          <div id="viewSpots">
-            <h1>Fish Viewing Spots</h1>
-            <p id="load">Aquiring Location<br /><img src="img/ring-alt.gif" alt="Progress bar"></p>
-            <ul>
-              <li><span data-lat="45.644276" data-lon="-121.940634" class="getSpan">? miles to</span> Bonnaville Dam</li>
-              <li><span data-lat="45.613993" data-lon="-121.134115" class="getSpan">? miles to</span> Dalles Dam</li>
-              <li><span data-lat="45.640337" data-lon="-121.928959" class="getSpan">? miles to</span> Eagle Creek</li>
-            </ul>
-          </div>
+            <div class="graphic">
+                <img src="img/salmonLogoOne.svg" alt="Slamon Logo" />
+            </div>
+            <div id="viewSpots">
+                <h1>Fish Viewing Spots</h1>
+                <p id="load">Aquiring Location
+                    <br />
+                    <img src="img/ring-alt.gif" alt="Progress bar">
+                </p>
+                <ul>
+                    <li>
+                        <span data-lat="45.644276" data-lon="-121.940634" class="getSpan">? miles to</span> Bonnaville Dam</li>
+                    <li>
+                        <span data-lat="45.613993" data-lon="-121.134115" class="getSpan">? miles to</span> Dalles Dam</li>
+                    <li>
+                        <span data-lat="45.640337" data-lon="-121.928959" class="getSpan">? miles to</span> Eagle Creek</li>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="footer">
-      <footer>
-        <h2>testTwo!</h2>
-        <h3>Enter in your email below to get email updates on salmon counts</h3>
-        <form class="subscribe" action="index.html" method="post">
-          Email:<br>
-          <input type="text" name="email">
-        </form>
-      </footer>
+        <footer>
+            <h2>testTwo!</h2>
+            <h3>Enter in your email below to get email updates on salmon counts</h3>
+            <!-- Begin MailChimp Signup Form -->
+            <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+            <div id="mc_embed_signup">
+                <form action="//hannahgaskins.us13.list-manage.com/subscribe/post?u=6735cc6b20d3637223ec9190f&amp;id=4ef8ef388c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div id="mc_embed_signup_scroll">
+                        <label for="mce-EMAIL">Subscribe to our mailing list</label>
+                        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                            <input type="text" name="b_6735cc6b20d3637223ec9190f_4ef8ef388c" tabindex="-1" value="">
+                        </div>
+                        <div class="clear">
+                            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </footer>
     </div>
     <script src="js/calcDistance.js"></script>
     <script src="js/highcharts.js"></script>
-    <script src="data/historicalAnnualData.json"></script> <!-- REPLACE WITH HISTORIALANNUALDATA.JSON ONCE WE'RE READY FOR THE FULL DATA SET -->
+    <script src="data/historicalAnnualData.json"></script>
+    <!-- REPLACE WITH HISTORIALANNUALDATA.JSON ONCE WE'RE READY FOR THE FULL DATA SET -->
     <script src="js/chartGeneration.js"></script>
-  </body>
+</body>
+
 </html>
