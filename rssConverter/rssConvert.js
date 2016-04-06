@@ -91,6 +91,7 @@ google.setOnLoadCallback(initialize);
 
 /*==============================================
       Functions for processing Rss-data:
+    (called inside of initialize-function)
 ===============================================*/
 
 //****** STEP 1 --- pull title and fish data for each dam pushes selected data into rawData-Array
