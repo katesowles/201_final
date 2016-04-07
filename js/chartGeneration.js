@@ -105,7 +105,6 @@ function getMonthToMatch(arrayToSearch) {
         var monthToMatch = dateArray[i].slice(0, 2)
         var dayToMatch = dateArray[i].slice(3, 5)
     }
-
 }
 
 getMonthToMatch(dateArray);
@@ -120,7 +119,7 @@ function addToMostRecentArray(range) {
 }
 
 addToMostRecentArray(7);
-
+    // console.log(mostRecentDataArray);
 
 // needed for dailyComparisons chart // calcs total fish for the most recent dates //
 
@@ -136,10 +135,6 @@ addToMostRecentTotals();
 
 
 // HISTORICAL DATA LINE ////////////////////////////////////////////////////////
-
-
-
-
 // needed for dailyComparisons chart // finds the matching dates in history ////
 
 var today = bonnevilleDailies.slice(-1);
@@ -154,104 +149,155 @@ function addToMatchingDatesArray(monthToMatch, dayToMatch) {
 
         var month = ("0" + (fullDate.getMonth() + 1)).slice(-2).toString();
         var day = ("0" + fullDate.getDate()).slice(-2).toString();
-        // console.log(month, day);
         // console.log(month == monthToMatch && day == dayToMatch);
-        //console.log(dayToMatch);
 
         if (month === monthToMatch && day === dayToMatch) {
             // console.log('ran true', bonnevilleDailies[i]);
             matchingDatesArray.push(bonnevilleDailies[i]);
         }
     }
+    // console.log(matchingDatesArray);
     return matchingDatesArray;
 }
 
-// for (var jj = 0; jj < 28; jj++) {
 for (var ii = 0; ii < dateArray.length; ii++) {
     addToMatchingDatesArray(dateArray[ii].slice(0, 2), dateArray[ii].slice(3, 5));
 }
-// }
 // console.log(matchingDatesArray);
 
-
-
-// console.log("4) today's date: ", today[0]["Date"]);
-
-
 // needed for dailyComparisons chart ///////////////////////////////////////////
 
-var dailyTotalObject = {};
-
-function sum( obj ) {
-  var sum = 0;
-  for( var el in obj ) {
-    if( obj.hasOwnProperty( el ) ) {
-      sum += parseFloat( obj[el] );
-
-    }
-
-  }
-  // console.log(sum);
-  return sum;
-}
-
-var dailyTotalAverages = {};
-
-function getTotals() {
-    for (var i = 0; i < matchingDatesArray.length - 1; i++) {
-        var div = 0;
-        if (matchingDatesArray[i]['Date'].slice(0, 4) === matchingDatesArray[i + 1]['Date'].slice(0, 4)) {
-            div++
-            var result = [
-
-            matchingDatesArray[i + 1]["Chinook"] + matchingDatesArray[i + 1]["Coho"] + matchingDatesArray[i + 1]["Steelhead"],
-
-            matchingDatesArray[i]["Chinook"] + matchingDatesArray[i]["Coho"] + matchingDatesArray[i]["Steelhead"]];
-
-            var avg = result.reduce(function(a, b) {
-                return a + b;
-            }) / div;
-
-
-            //figure out what to divide by to get average;
-
-            dailyTotalObject[matchingDatesArray[i]['Date']] = Math.floor(avg);
-            //some object with one date equally the total of all of that day over history = sum(dailyTotalObject);
-        };
-
-        };
-    }
-
-console.log(dailyTotalAverages);
-
-
-
-function sumYears() {
-    var result = []
-    result.push(dailyTotalObject);
-    // console.log(result);
-    for (var i = 0; i < result.length; i++) {
-
-    }
-}
-sumYears();
-getTotals();
-
-// needed for dailyComparisons chart ///////////////////////////////////////////
-// var averagesArray = [];
-// var dailyAverage;
-//
-// function getAverages() {
-//     for (var i = 0; i < dailyTotalObject.length; i++) {
-//         // console.log(dailyTotalObject[i]);
+// function sum( obj ) {
+//   var sum = 0;
+//   for( var el in obj ) {
+//     if( obj.hasOwnProperty( el ) ) {
+//         // console.log(obj[el]);
+//       sum += parseFloat( obj[el] );
 //     }
-//     dailyAverage = (dailyTotalObject.reduce(function(a, b) {
-//         return a + b;
-//     }))
+//   }
+//   // console.log(sum);
+//   return sum;
+// }
+// if(bonnevilleDailies.hasOwnProperty('3/30/1966')) {
+//     console.log('date match');
+// }
+// sum(bonnevilleDailies);
+//
+
+var matchDate = [];
+for (var kk = 0; kk < bonnevilleDailies.length; kk++) {
+    var searchDates = bonnevilleDailies[kk];
+    if (searchDates.date == "3/30/1966") {
+        matchDate.push(searchDates);
+        console.log("matchFound");
+        break
+    }
+}
+console.log(matchDate);
+
+var id = 2,
+    found = false;
+for (var i=0; i<bonnevilleDailies.length; i++) {
+    if (bonnevilleDailies[i].id == id) {
+        found = true;
+        console.log(found);
+        break;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+// var dailyTotalObject = {};
+//
+// var dailyTotalAverages = {};
+//
+// function getTotals() {
+//     var counter = 0;
+//
+//     for (var i = 0; i < matchingDatesArray.length - 1; i++) {
+//         if (matchingDatesArray[i]['Date'].slice(0, 4) === matchingDatesArray[i + 1]['Date'].slice(0, 4)) {
+//             counter++;
+//             var result = [matchingDatesArray[i + 1]["Chinook"] + matchingDatesArray[i + 1]["Coho"] + matchingDatesArray[i + 1]["Steelhead"], matchingDatesArray[i]["Chinook"] + matchingDatesArray[i]["Coho"] + matchingDatesArray[i]["Steelhead"]];
+//
+//
+//             dailyTotalObject[matchingDatesArray[i]['Date']] = Math.floor(avg);
+//
+//             //some object with one date equally the total of all of that day over history = sum(dailyTotalObject);
+//         } else {
+//             var avg = result.reduce(function(a, b) { return a + b; }) / counter;
+//
+//             console.log(dailyTotalObject);
+//             // console.log(matchingDatesArray);
+//
+//             counter = 0;
+//
+//         }
+//
+//         // console.log(counter);
+//
+//     }
 // }
 //
-// getAverages();
-// console.log(averagesArray);
+// // console.log(dailyTotalAverages);
+//
+//
+//
+// // function sumYears() {
+// //     var result = []
+// //     result.push(dailyTotalObject);
+// //     // console.log(result);
+// //     for (var i = 0; i < result.length; i++) {
+// //
+// //     }
+// // }
+// // sumYears();
+// getTotals();
+
+
+
+// needed for dailyComparisons chart ///////////////////////////////////////////
+// var dailyTotalArray = [];
+//
+// function getTotals () {
+//     console.log(matchingDatesArray.length);
+//     console.log(matchingDatesArray);
+//
+//     for (i = 0; i < matchingDatesArray.length -1; i++) {
+//         var counter = 0;
+//         if (matchingDatesArray[i]['Date'].slice(0, 4) === matchingDatesArray[i + 1]['Date'].slice(0, 4)) {
+//             counter++;
+//             var result = [matchingDatesArray[i + 1]["Chinook"] + matchingDatesArray[i + 1]["Coho"] + matchingDatesArray[i + 1]["Steelhead"], matchingDatesArray[i]["Chinook"] + matchingDatesArray[i]["Coho"] + matchingDatesArray[i]["Steelhead"]];
+//
+//             // var avg = result.reduce(function(a, b) { return a + b }) / 50;
+//
+//             var dailyTotal = matchingDatesArray[i]["Chinook"] + matchingDatesArray[i]["Coho"] + matchingDatesArray[i]["Steelhead"]
+//             dailyTotalArray.push(dailyTotal)
+//     }
+//     // console.log(avg);
+//
+// }
+// }
+// getTotals();
+//
+// // needed for dailyComparisons chart ///////////////////////////////////////////
+// function getAverages () {
+//     var dailyAverage = (dailyTotalArray.reduce(function(a, b) { return a + b; })) / dailyTotalArray.length;
+//     // console.log(Math.floor(dailyAverage));
+//     return dailyAverage;
+// }
+// // getAverages();
 
 
 
@@ -451,7 +497,6 @@ function dailyComparisons(range) {
                 name: "Most Recent Week's Data",
                 color: "#ffaa88",
                 data: mostRecentTotals
-                    // data: [1, 0, 3, 5, 6, 9, 7, 10, null, null, null, null, null, null, null]
             }]
         });
     });
