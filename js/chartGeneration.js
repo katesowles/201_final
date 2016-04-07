@@ -80,6 +80,7 @@ addToAnnualSplitArray(annualSteelheadPercent, "Steelhead");
 // needed for dailyComparisons chart // isolates the range of dates to show ////
 
 var dateArray = [];
+var dailyDateArray = [];
 var initialDate = new Date();
 
 function addToDateArray(range) {
@@ -88,11 +89,13 @@ function addToDateArray(range) {
         var newDay = (initialDate.valueOf() - (86400000 * range) + (86400000 * i));
         var date = new Date(newDay);
         var formattedDate = ("0" + (date.getMonth() + 1)).slice(-2) + '/' + ("0" + date.getDate()).slice(-2) + '/' + date.getFullYear();
+        var shortDate = (date.getMonth() + 1) + '/' + (date.getDate());
         dateArray.push(formattedDate);
+        dailyDateArray.push(shortDate);
     }
 }
 
-addToDateArray(7);
+// addToDateArray(7);
 
 
 // needed for dailyComparisons chart // finds the data for most recent dates ///
@@ -166,140 +169,37 @@ for (var ii = 0; ii < dateArray.length; ii++) {
 // console.log(matchingDatesArray);
 
 // needed for dailyComparisons chart ///////////////////////////////////////////
+var allSpeciesAverage = [];
 
-// function sum( obj ) {
-//   var sum = 0;
-//   for( var el in obj ) {
-//     if( obj.hasOwnProperty( el ) ) {
-//         // console.log(obj[el]);
-//       sum += parseFloat( obj[el] );
-//     }
-//   }
-//   // console.log(sum);
-//   return sum;
-// }
-// if(bonnevilleDailies.hasOwnProperty('3/30/1966')) {
-//     console.log('date match');
-// }
-// sum(bonnevilleDailies);
-//
-
-var matchDate = [];
-for (var kk = 0; kk < bonnevilleDailies.length; kk++) {
-    var searchDates = bonnevilleDailies[kk];
-    if (searchDates.date == "3/30/1966") {
-        matchDate.push(searchDates);
-        console.log("matchFound");
-        break
-    }
+function monthDayString(ep) {
+  var newEp = new Date(ep);
+  var month = newEp.getMonth() + 1;
+  var day   = newEp.getDate();
+  return month + '/' + day;
 }
-console.log(matchDate);
-
-var id = 2,
-    found = false;
-for (var i=0; i<bonnevilleDailies.length; i++) {
-    if (bonnevilleDailies[i].id == id) {
-        found = true;
-        console.log(found);
-        break;
-    }
+function allDaysForAllFishies() {
+  var species = ["Chinook", "Steelhead", "Coho"];
+  var epoch_day_incr = 24*60*60*1000;
+  // Arbitrary date that contains 2000. Use a leap year!
+  var d = new Date(2000, 0, 1); // Jan 1
+  // var p = d.getTime(); // Convert to epoch
+  for (var dd = 0; dd < dailyDateArray.length; dd++) {
+    var mds = dailyDateArray[dd];
+    // console.log(mds);
+    // console.log(dailyDateArray);
+    var mdMatches = fish.filter(function(el) { return el.Date.slice(0,-5) == mds; });
+    var sum = mdMatches.reduce( function(sum, b) {
+      return sum + b[species[0]] + b[species[1]] + b[species[2]]; }, 0);
+      var avg = sum/mdMatches.length;
+    //   console.log(avg);
+      allSpeciesAverage.push(Math.floor(avg));
+    // console.log(mds + ' ('+mdMatches.length+' years): Avg across all species = ' + sum/mdMatches.length);
+    // p += epoch_day_incr; // Increment epoch by one day
+  }
 }
+// allDaysForAllFishies();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-// var dailyTotalObject = {};
-//
-// var dailyTotalAverages = {};
-//
-// function getTotals() {
-//     var counter = 0;
-//
-//     for (var i = 0; i < matchingDatesArray.length - 1; i++) {
-//         if (matchingDatesArray[i]['Date'].slice(0, 4) === matchingDatesArray[i + 1]['Date'].slice(0, 4)) {
-//             counter++;
-//             var result = [matchingDatesArray[i + 1]["Chinook"] + matchingDatesArray[i + 1]["Coho"] + matchingDatesArray[i + 1]["Steelhead"], matchingDatesArray[i]["Chinook"] + matchingDatesArray[i]["Coho"] + matchingDatesArray[i]["Steelhead"]];
-//
-//
-//             dailyTotalObject[matchingDatesArray[i]['Date']] = Math.floor(avg);
-//
-//             //some object with one date equally the total of all of that day over history = sum(dailyTotalObject);
-//         } else {
-//             var avg = result.reduce(function(a, b) { return a + b; }) / counter;
-//
-//             console.log(dailyTotalObject);
-//             // console.log(matchingDatesArray);
-//
-//             counter = 0;
-//
-//         }
-//
-//         // console.log(counter);
-//
-//     }
-// }
-//
-// // console.log(dailyTotalAverages);
-//
-//
-//
-// // function sumYears() {
-// //     var result = []
-// //     result.push(dailyTotalObject);
-// //     // console.log(result);
-// //     for (var i = 0; i < result.length; i++) {
-// //
-// //     }
-// // }
-// // sumYears();
-// getTotals();
-
-
-
-// needed for dailyComparisons chart ///////////////////////////////////////////
-// var dailyTotalArray = [];
-//
-// function getTotals () {
-//     console.log(matchingDatesArray.length);
-//     console.log(matchingDatesArray);
-//
-//     for (i = 0; i < matchingDatesArray.length -1; i++) {
-//         var counter = 0;
-//         if (matchingDatesArray[i]['Date'].slice(0, 4) === matchingDatesArray[i + 1]['Date'].slice(0, 4)) {
-//             counter++;
-//             var result = [matchingDatesArray[i + 1]["Chinook"] + matchingDatesArray[i + 1]["Coho"] + matchingDatesArray[i + 1]["Steelhead"], matchingDatesArray[i]["Chinook"] + matchingDatesArray[i]["Coho"] + matchingDatesArray[i]["Steelhead"]];
-//
-//             // var avg = result.reduce(function(a, b) { return a + b }) / 50;
-//
-//             var dailyTotal = matchingDatesArray[i]["Chinook"] + matchingDatesArray[i]["Coho"] + matchingDatesArray[i]["Steelhead"]
-//             dailyTotalArray.push(dailyTotal)
-//     }
-//     // console.log(avg);
-//
-// }
-// }
-// getTotals();
-//
-// // needed for dailyComparisons chart ///////////////////////////////////////////
-// function getAverages () {
-//     var dailyAverage = (dailyTotalArray.reduce(function(a, b) { return a + b; })) / dailyTotalArray.length;
-//     // console.log(Math.floor(dailyAverage));
-//     return dailyAverage;
-// }
-// // getAverages();
-
-
+console.log(allSpeciesAverage);
 
 
 
@@ -314,14 +214,13 @@ function speciesPerDamPerYear(maximum) {
     function numberWithCommas(number) {
         return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
-
     $(function() {
         $("#chartContainer").highcharts({
             chart: {
                 type: "column",
             },
             title: {
-                text: "Annual Salmon Count"
+                text: ""
             },
             xAxis: {
                 categories: yearArray
@@ -395,7 +294,7 @@ function speciesSplit(year) {
                 type: 'pie',
             },
             title: {
-                text: 'Species Share @ Bonneville Dam'
+                text: ''
             },
             xAxis: {
                 categories: yearArray
@@ -440,6 +339,8 @@ function speciesSplit(year) {
 }
 
 function dailyComparisons(range) {
+    addToDateArray(range);
+    allDaysForAllFishies();
     function numberWithCommas(number) {
         return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
@@ -449,7 +350,7 @@ function dailyComparisons(range) {
                 type: 'area',
             },
             title: {
-                text: 'Historical Daily Average vs Most Recent Week'
+                text: ''
             },
 
             legend: {
@@ -483,7 +384,7 @@ function dailyComparisons(range) {
             },
             plotOptions: {
                 area: {
-                    fillOpacity: 0.3
+                    fillOpacity: 0.1
                 }
             },
             credits: {
@@ -492,7 +393,7 @@ function dailyComparisons(range) {
             series: [{
                 name: 'Historical Daily Average',
                 color: "#ff8888",
-                data: [0, 1, 4, 4, 5, 2, 3, 7, 9, 13, 15, 15, 14, 18, 22]
+                data: allSpeciesAverage
             }, {
                 name: "Most Recent Week's Data",
                 color: "#ffaa88",
@@ -504,4 +405,4 @@ function dailyComparisons(range) {
 
 // speciesPerDamPerYear(10);   // pass it a range: 10, 25, 50
 // speciesSplit(0);            // pass it an year: 0 = 2014, 1 = 2013 ...
-dailyComparisons(7); // pass it a range: 7, 30, 182
+dailyComparisons(7);        // pass it a range: 7, 30, 182

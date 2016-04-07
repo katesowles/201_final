@@ -85084,5 +85084,11 @@ var bonnevilleDailies = [
     "Chinook": 154,
     "Steelhead": 34,
     "Coho": 0,
+  },
+  {
+    "Date": "4/6/2016",
+    "Chinook": 118,
+    "Steelhead": 49,
+    "Coho": 0,
   }
 ]
