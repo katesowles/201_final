@@ -1,54 +1,69 @@
 /*
 To use plug in names and functions into functionsArray and list of functions
-below respectively. 
+below respectively.
 */
 
-var functionsArray = [chartOne, chartTwo, chartThree, chartFour, chartFive, chartSix, chartSeven, chartEight, chartNine];
+var chartFunctionsArray = [chartOne, chartTwo, chartThree, chartFour, chartFive, chartSix, chartSeven];
 
 var dropDownEvent = document.getElementById("dropDown");
+var container = document.getElementById("chartContainer");
+var chartTitle = document.getElementById("chartLabel");
 
 dropDownEvent.addEventListener("change", function() {
   // alert("poopybutts");
   var dropDownIndex = document.getElementById('dropDown').selectedIndex;
   // alert(aa+1);
 
-  functionsArray[dropDownIndex](); // dropDownIndex is equal to the index value of functionsArray
+  chartFunctionsArray[dropDownIndex](); // dropDownIndex is equal to the index value of functionsArray
 
 })
 
 
 function chartOne() {
-  alert("functionOne");
+    // storageObject.chartNumber = 1;
+    chartTitle.textContent = "Historical Daily Averages vs Most Recent Week";
+    //stroageIn();
+    dailyComparisons(7);
 }
 
 function chartTwo() {
-  alert("functionTwo");
+    // storageObject.chartNumber = 2;
+    chartTitle.textContent = "Annual Salmon Count, Last 10 Years";
+    // storageIn();
+    speciesPerDamPerYear(10);
 }
 
 function chartThree() {
-  alert("functionThree");
+    // storageObject.chartNumber = 3;
+    chartTitle.textContent = "Annual Salmon Count, Last 25 Years";
+    // storageIn();
+    speciesPerDamPerYear(25);
 }
 
 function chartFour() {
-  alert("functionFour");
+    // storageObject.chartNumber = 4;
+    chartTitle.textContent = "Annual Salmon Count, Last 25 Years";
+    // storageIn();
+    speciesPerDamPerYear(50);
 }
 
 function chartFive() {
-  alert("functionFive");
+    // storageObject.chartNumber = 5;
+    chartTitle.textContent = "Species Split, 2014";
+    // storageIn();
+    speciesSplit(0);
 }
 
 function chartSix() {
-  alert("functionSix");
+    // storageObject.chartNumber = 6;
+    chartTitle.textContent = "Species Split, 2009";
+    // storageIn();
+    speciesSplit(5);
 }
 
 function chartSeven() {
-  alert("functionSeven");
-}
-
-function chartEight() {
-  alert("functionEight");
-}
-
-function chartNine() {
-  alert("functionNine");
+    // storageObject.chartNumber = 7;
+    chartTitle.textContent = "Species Split, 2004";
+    // storageIn();
+    speciesSplit(10);
 }
