@@ -14,6 +14,11 @@ divDisplayThree.className = "inactive";
 divDisplayFour.className = "inactive";
 
  svgBonnevilleSite.addEventListener("mouseover", function() {
+     // localStorage functionality:
+     storageObject.divDisplay = 1;
+     storageIn();
+
+    // displaying / hiding divs:
     divDisplayOne.className = "active";
     divDisplayTwo.className = "inactive";
     divDisplayThree.className = "inactive";
@@ -21,6 +26,11 @@ divDisplayFour.className = "inactive";
  })
 
  svgEagleSite.addEventListener("mouseover", function() {
+     // localStorage functionality:
+     storageObject.divDisplay = 2;
+     storageIn();
+
+    // displaying / hiding divs:
     divDisplayOne.className = "inactive";
     divDisplayTwo.className = "active";
     divDisplayThree.className = "inactive";
@@ -28,6 +38,11 @@ divDisplayFour.className = "inactive";
  })
 
  svgHermanSite.addEventListener("mouseover", function() {
+     // localStorage functionality:
+     storageObject.divDisplay = 3;
+     storageIn();
+
+   // displaying / hiding divs:
    divDisplayOne.className = "inactive";
    divDisplayTwo.className = "inactive";
    divDisplayThree.className = "active";
@@ -35,6 +50,11 @@ divDisplayFour.className = "inactive";
  })
 
  svgKlickSite.addEventListener("mouseover", function() {
+     // localStorage functionality:
+     storageObject.divDisplay = 4;
+     storageIn();
+     
+   // displaying / hiding divs:
    divDisplayOne.className = "inactive";
    divDisplayTwo.className = "inactive";
    divDisplayThree.className = "inactive";
