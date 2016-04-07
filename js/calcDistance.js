@@ -25,20 +25,12 @@ function calcDistance(latOne, lonOne, latTwo, lonTwo) {
   }
 }
 
-//by default the error message is hidden
-var error = document.getElementById("error");
-error.setAttribute("style", "visibility: hidden");
-
-//by default the load icon is visible
-var load = document.getElementById('load');
-load.setAttribute("style", "visibility: visible");
 
 //geolocation API to access GPS within users browser
 navigator.geolocation.getCurrentPosition(userLocation);
 
 //function to get position and manipulate dom based on events
 function userLocation(currentPosition) {
-  load.setAttribute("style", "visibility: hidden");
 
   //get span elements with lat and lon data within
   var fishViewingSpots = document.getElementsByClassName("getSpan");
