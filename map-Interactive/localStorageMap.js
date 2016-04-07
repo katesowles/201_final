@@ -83,6 +83,7 @@ var checkStorage = function() {
             }
 
 
+     // COMMENT BACK IN WHEN CHARTS IS MERGED !!! //
 
             // uses storageObject.chartNumber to re-call that chart and display it:
             // chartFunctionsArray[outOfStorage.chartNumber]();
