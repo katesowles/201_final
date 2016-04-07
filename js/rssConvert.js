@@ -68,11 +68,11 @@ function initialize() {
           console.log('Current RSS-Feed Data --- chinookCohoData:  ', chinookCohoData);
 
           // calc total fish passed Bonneville Dam:
-          rssFishCount = parseInt(chinookCohoData[0].Chinook) + parseInt(chinookCohoData[0].Coho);
+          rssFishCount = parseInt(chinookCohoData[0].Chinook) + parseInt(chinookCohoData[0].Coho) + parseInt(chinookCohoData[0].Steelhead);
 
           // display rssFishCount:
           var fishCountId = document.getElementById('rssFishCount');  // to display rssFishCount in the html
-          fishCountId.textContent = 'Yesterday ' + rssFishCount + ' Salmon passed the Bonneville dam.';
+          fishCountId.textContent = 'Yesterday ' + rssFishCount + ' Chinook, Coho, and Steelhead passed the Bonneville dam.';
 
           } // if close
 
