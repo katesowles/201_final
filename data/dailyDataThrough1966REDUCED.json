@@ -1,4 +1,4 @@
-[
+var bonnevilleDailies = [
   {
     "Date": "3/11/1966",
     "Chinook": 1,
@@ -85077,6 +85077,18 @@
     "Date": "4/4/2016",
     "Chinook": 96,
     "Steelhead": 22,
+    "Coho": 0,
+  },
+  {
+    "Date": "4/5/2016",
+    "Chinook": 154,
+    "Steelhead": 34,
+    "Coho": 0,
+  },
+  {
+    "Date": "4/6/2016",
+    "Chinook": 118,
+    "Steelhead": 49,
     "Coho": 0,
   }
 ]

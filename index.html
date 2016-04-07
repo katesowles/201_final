@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="css/skeleton.css"></link>
     <link rel="stylesheet" href="css/main.css"></link>
   </head>
-
   <body>
       <div class="header">
         <header>
@@ -129,21 +128,20 @@
         </div>
       </div>
       <div class="pageTwo">
-          <h1>PAGE TWO (charts)</h1>
-          <div id="historicalAnnualTotals"></div>
-          <div id="speciesSplit"></div>
+          <h2>PAGE TWO (charts)</h2>
           <div class="chartDropDown">
             <select id="dropDown">
-              <option value="one" id="dropDownOne">one</option>
-              <option value="two" class="dropDownTwo">two</option>
-              <option value="three" class="dropDownThree">three</option>
-              <option value="four" class="dropDownFour">four</option>
-              <option value="five" class="dropDownFive">five</option>
-              <option value="six" class="dropDownSix">six</option>
-              <option value="seven" class="dropDownSeven">seven</option>
-              <option value="eight" class="dropDownEight">eight</option>
-              <option value="nine" class="dropDownNine">nine</option>
+              <option value="one" id="dropDownOne">Historical Daily Averages vs Most Recent Week</option>
+              <option value="two" class="dropDownTwo">Annual Salmon Count, Last 10 Years</option>
+              <option value="three" class="dropDownThree">Annual Salmon Count, Last 25 Years</option>
+              <option value="four" class="dropDownFour">Annual Salmon Count, Last 50 Years</option>
+              <option value="five" class="dropDownFive">Species Split, 2014</option>
+              <option value="six" class="dropDownSix">Species Split, 2009</option>
+              <option value="seven" class="dropDownSeven">Species Split, 2004</option>
             </select>
+          </div>
+          <h4 id="chartLabel">Annual Salmon Count, Last 10 Years</h4>
+          <div id="chartContainer">
           </div>
       </div>
       <div class="pageThree">
@@ -175,8 +173,9 @@
       <!-- <script src="js/calcDistance.js"></script> -->
       <script src="js/calcDistance.js"></script>
       <script src="js/highcharts.js"></script>
-      <script src="data/historicalAnnualData.json"></script>
-      <!-- REPLACE WITH HISTORIALANNUALDATA.JSON ONCE WE'RE READY FOR THE FULL DATA SET -->
+      <script src="data/historicalAnnualDataREDUCED.json"></script>
+      <script src="data/fish.js"></script>
+      <script src="data/dailyDataThrough1966REDUCED.json"></script>
       <script src="js/chartGeneration.js"></script>
       <script src="js/chartDropDown.js"></script>
       <script src="js/map.js"></script>
