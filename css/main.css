@@ -94,9 +94,110 @@ img {
   border: 2px solid;
   padding: 25px;
   margin: 10px auto;
-  display: none; /* ¡¡¡¡¡all divs are currently on display none!!!!*/
 }
 
+/*
+================
+    svg css
+================
+*/
+
+.cls-1,
+.cls-6,
+.cls-7{
+  fill:none;
+}
+.cls-1,
+.cls-10,
+.cls-4{
+  stroke:#000;
+}
+.cls-1,
+.cls-10,
+.cls-2,
+.cls-4,
+.cls-6,
+.cls-7,
+.cls-8,
+.cls-9{
+  stroke-miterlimit:10;
+}
+.cls-2{
+  fill:#fcc;
+  stroke:#f88;
+}
+.cls-3{
+  font-size:12px;
+}
+.cls-11,
+.cls-13,
+.cls-14,
+.cls-3,
+.cls-5{
+  font-family:Helvetica;
+}
+.cls-4,
+.cls-9{
+  fill:#fff;
+}
+.cls-5{
+  font-size:14.37px;
+}
+.cls-6,
+.cls-7,
+.cls-8,
+.cls-9{
+  stroke:#5a829c;
+}
+.cls-6,
+.cls-7{
+  stroke-linecap:round;
+}
+.cls-6{
+  stroke-width:0.5px;
+}
+.cls-8{
+  fill:#9ebbcb;
+}
+.cls-10{
+  fill:#faa;
+  stroke-width:3px;
+}
+.cls-11{
+  font-size:14px;
+}
+.cls-12,
+.cls-13,
+.cls-15{
+  letter-spacing:1px;
+}
+.cls-13,
+.cls-14{
+  font-size:18px;
+}
+.cls-15{
+  white-space:pre;
+}
+
+/*
+=====================
+interactivity for map
+=====================
+*/
+
+.cls-10:hover {
+  fill: #3CB25D;
+  opacity: .6;
+}
+
+
+.active {
+  display: block;
+}
+
+.inactive {
+  display: none;
+}
 
 /*hannah addition end*/
 #mc_embed_signup {
