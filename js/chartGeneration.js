@@ -86,7 +86,7 @@ var initialDate = new Date();
 function addToDateArray(range) {
     var doubleRange = 2 * range;
     for (i = 0; i < doubleRange + 1; i++) {
-        var newDay = (initialDate.valueOf() - (86400000 * range) + (86400000 * i));
+        var newDay = (initialDate.valueOf() - (86400000 * range) + (86400000 * i) );
         var date = new Date(newDay);
         var formattedDate = ("0" + (date.getMonth() + 1)).slice(-2) + '/' + ("0" + date.getDate()).slice(-2) + '/' + date.getFullYear();
         var shortDate = (date.getMonth() + 1) + '/' + (date.getDate());

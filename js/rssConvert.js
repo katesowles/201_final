@@ -11,7 +11,7 @@ var fishDate = new Date(); // sets a timestamp to first loading of pagge, then t
 
 var rssData = [];  // should make an array with 4 objects [{Willamette Falls}, {Bonneville Dam}, {The Dalles Dam}, {John Day Dam}]
 
-var fishCount = 0;
+var rssFishCount = 0;
 
 var rawData = [];
 var damsArray = [];
@@ -68,11 +68,11 @@ function initialize() {
           console.log('Current RSS-Feed Data --- chinookCohoData:  ', chinookCohoData);
 
           // calc total fish passed Bonneville Dam:
-          fishCount = parseInt(chinookCohoData[0].Chinook) + parseInt(chinookCohoData[0].Coho);
+          rssFishCount = parseInt(chinookCohoData[0].Chinook) + parseInt(chinookCohoData[0].Coho);
 
-          // display fishCount:
-          var fishCountId = document.getElementById('fishCount');  // to display fishCount in the html
-          fishCountId.textContent = 'Yesterday ' + fishCount + ' Salmon passed the Bonneville dam.';
+          // display rssFishCount:
+          var fishCountId = document.getElementById('rssFishCount');  // to display rssFishCount in the html
+          fishCountId.textContent = 'Yesterday ' + rssFishCount + ' Salmon passed the Bonneville dam.';
 
           } // if close
 

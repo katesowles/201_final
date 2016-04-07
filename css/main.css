@@ -137,6 +137,20 @@ svg {
   padding: 50px;
   text-align: center;
 }
+
+/*
+===================
+    rss convert
+===================
+*/
+
+#fishCount {
+    text-align: center;
+    font-family: 'Lato', “Helvetica Neue”, Helvetica, Arial, sans-serif;
+    font-size: 1.7em;
+    padding: 15px;
+}
+
 /*
 ==================
     div content
