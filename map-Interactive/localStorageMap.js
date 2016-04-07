@@ -33,7 +33,7 @@ var checkStorage = function() {
 
     if (localStorage.getItem('storageObject')) {
 
-            storageObject = new makeStorageObject();  // storageObjectOne HAS to exist in order to re-populate!!!
+            storageObject = new makeStorageObject();
 
             var outOfStorage = storageOut();
 
@@ -90,6 +90,12 @@ var checkStorage = function() {
     } else {
         // make a "fresh" storageObject
         storageObject = new makeStorageObject();
+
+        divDisplayOne.className = "active";
+        divDisplayTwo.className = "inactive";
+        divDisplayThree.className = "inactive";
+        divDisplayFour.className = "inactive";
+        console.log("Start-up div-1");
 
     }//Main if Close
 
