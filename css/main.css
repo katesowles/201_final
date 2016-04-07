@@ -1,0 +1,286 @@
+/*
+======================
+    general styles
+======================
+*/
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', “Helvetica Neue”, Helvetica, Arial, sans-serif;
+  color: #384047;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  line-height: 1em;
+  letter-spacing: .08em;
+  text-align: center;
+}
+
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  line-height: 1em;
+  font-style: italic;
+  letter-spacing: .08em;
+}
+
+h4 {
+    font-family: 'Lato', “Helvetica Neue”, Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 2em;
+}
+
+p {
+  font-family: 'Lato', “Helvetica Neue”, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: .1em;
+  font-size: 14px;
+  padding: 2px;
+}
+
+ul, li {
+  font-family: 'Lato', “Helvetica Neue”, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: .1em;
+  font-size: 14px;
+  padding: 2px;
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  padding-left: 10px;
+}
+
+svg {
+}
+
+/*for loading icon*/
+#load {
+  position: flex;
+  width: auto;
+  width: 94px;
+  /*background: white;*/
+  border-radius: 5px;
+  text-align: center;
+  margin: 0 auto;
+
+}
+
+/*
+===================
+    navbar css
+===================
+*/
+
+.navBar {
+  width: 100%;
+  height: 75px;
+  background-color: #9EBBCE;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-wrapper > a {
+  font-family: 'Playfair Display', Times, serif;
+  font-size: 26px;
+  color: #568FB2;
+  text-decoration: none;
+  /*text-transform: uppercase;*/
+  padding: 2px;
+  background: #faa;
+  border: 3px solid #000;
+
+}
+
+.nav-wrapper > a:hover {
+  color: #faa;
+  background: #FFFEA2;
+  font-family: 'Playfair Display', Times, serif;
+  text-decoration: none;
+  transition: all .4s ease;
+}
+
+.wrapper {
+  max-width: 90%;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background: #f4f7f8;
+  border-radius: 8px;
+}
+
+.graphic {
+  margin: 1em auto;
+  width: 20%;
+}
+
+.chartDropDown {
+  margin: 0 auto;
+  padding: 50px;
+  text-align: center;
+}
+/*
+==================
+    div content
+==================
+*/
+.siteDescriptions {
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 40px 30px;
+}
+
+/*testing on bon div - add class to all others when functional*/
+.divContent {
+    display: flex;
+}
+
+#bonnevilleDam,
+#eagleCreekTrailhead,
+#klickitatRiverFalls,
+#hermanCreekTrailhead {
+  border: 2px solid;
+  padding: 25px;
+  margin: 10px auto;
+  transition: all 0.3s ease 0s;
+}
+
+/*
+================
+    svg css
+================
+*/
+
+.cls-1,
+.cls-6,
+.cls-7{
+  fill:none;
+}
+.cls-1,
+.cls-10,
+.cls-4{
+  stroke:#000;
+}
+.cls-1,
+.cls-10,
+.cls-2,
+.cls-4,
+.cls-6,
+.cls-7,
+.cls-8,
+.cls-9{
+  stroke-miterlimit:10;
+}
+.cls-2{
+  fill:#fcc;
+  stroke:#f88;
+}
+.cls-3{
+  font-size:12px;
+}
+.cls-11,
+.cls-13,
+.cls-14,
+.cls-3,
+.cls-5{
+  font-family:Helvetica;
+}
+.cls-4,
+.cls-9{
+  fill:#fff;
+}
+.cls-5{
+  font-size:14.37px;
+}
+.cls-6,
+.cls-7,
+.cls-8,
+.cls-9{
+  stroke:#5a829c;
+}
+.cls-6,
+.cls-7{
+  stroke-linecap:round;
+}
+.cls-6{
+  stroke-width:0.5px;
+}
+.cls-8{
+  fill:#9ebbcb;
+}
+.cls-10{
+  fill:#faa;
+  stroke-width:3px;
+  opacity: 1;
+  transition: all 0.3s ease 0s;
+}
+.cls-11{
+  font-size:14px;
+}
+.cls-12,
+.cls-13,
+.cls-15{
+  letter-spacing:1px;
+}
+.cls-13,
+.cls-14{
+  font-size:18px;
+}
+.cls-15{
+  white-space:pre;
+}
+
+/*
+=====================
+interactivity for map
+=====================
+*/
+
+.cls-10:hover {
+  fill: #3CB25D;
+  opacity: .6;
+}
+
+/*toggles for divs to show*/
+
+.active {
+  display: block;
+}
+
+.inactive {
+  display: none;
+}
+
+/*hannah addition end*/
+
+/*
+=====================
+      mailchimp
+=====================
+*/
+
+#mc_embed_signup {
+    background: #fff;
+    clear: left;
+    font: 14px Helvetica, Arial, sans-serif;
+    width: 100%;
+}
