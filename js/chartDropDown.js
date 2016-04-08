@@ -20,7 +20,7 @@ dropDownEvent.addEventListener("change", function() {
 
 
 function chartOne() {
-    // container.destroy();
+    window.localStorage.clear();
     storageObject.chartNumber = 0;
     chartTitle.textContent = "Historical Daily Averages vs Most Recent Week";
     storageIn();
@@ -28,7 +28,7 @@ function chartOne() {
 }
 
 function chartTwo() {
-    // container.destroy();
+    window.localStorage.clear();
     storageObject.chartNumber = 1;
     chartTitle.textContent = "Annual Salmon Count, Last 10 Years";
     storageIn();
@@ -36,7 +36,7 @@ function chartTwo() {
 }
 
 function chartThree() {
-    // container.destroy();
+    window.localStorage.clear();
     storageObject.chartNumber = 2;
     chartTitle.textContent = "Annual Salmon Count, Last 25 Years";
     storageIn();
@@ -44,7 +44,7 @@ function chartThree() {
 }
 
 function chartFour() {
-    // container.destroy();
+    window.localStorage.clear();
     storageObject.chartNumber = 3;
     chartTitle.textContent = "Annual Salmon Count, Last 50 Years";
     storageIn();
@@ -52,7 +52,7 @@ function chartFour() {
 }
 
 function chartFive() {
-    // container.destroy();
+    window.localStorage.clear();
     storageObject.chartNumber = 4;
     chartTitle.textContent = "Species Split, 2014";
     storageIn();
@@ -60,7 +60,7 @@ function chartFive() {
 }
 
 function chartSix() {
-    // container.destroy();
+    window.localStorage.clear();
     storageObject.chartNumber = 5;
     chartTitle.textContent = "Species Split, 2009";
     storageIn();
@@ -68,7 +68,7 @@ function chartSix() {
 }
 
 function chartSeven() {
-    // container.destroy();
+    window.localStorage.clear();
     storageObject.chartNumber = 6;
     chartTitle.textContent = "Species Split, 2004";
     storageIn();

@@ -84,6 +84,7 @@ var dailyDateArray = [];
 var initialDate = new Date();
 
 function addToDateArray(range) {
+
     var doubleRange = 2 * range;
     for (i = 0; i < doubleRange + 1; i++) {
         var newDay = (initialDate.valueOf() - (86400000 * (range + 1)) + (86400000 * i) );
@@ -183,6 +184,7 @@ function allDaysForAllFishies() {
   // Arbitrary date that contains 2000. Use a leap year!
   var d = new Date(2000, 0, 1); // Jan 1
   // var p = d.getTime(); // Convert to epoch
+  allSpeciesAverage = [];
   for (var dd = 0; dd < dailyDateArray.length; dd++) {
     var mds = dailyDateArray[dd];
     // console.log(mds);
@@ -339,13 +341,19 @@ function speciesSplit(year) {
 }
 
 function dailyComparisons(range) {
+    dateArray = [];
     addToDateArray(range);
+    allSpeciesAverage = [];
     allDaysForAllFishies();
     function numberWithCommas(number) {
         return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
     $(function() {
-        $('#chartContainer').highcharts({
+        // if (chart already exists) {
+        //
+        // }
+
+        x = $('#chartContainer').highcharts({
             chart: {
                 type: 'area',
             },
@@ -405,4 +413,4 @@ function dailyComparisons(range) {
 
 // speciesPerDamPerYear(10);   // pass it a range: 10, 25, 50
 // speciesSplit(0);            // pass it an year: 0 = 2014, 1 = 2013 ...
-dailyComparisons(7);        // pass it a range: 7, 30, 182
+// dailyComparisons(7);        // pass it a range: 7, 30, 182
