@@ -198,10 +198,10 @@ function allDaysForAllFishies() {
     // console.log(mds + ' ('+mdMatches.length+' years): Avg across all species = ' + sum/mdMatches.length);
     // p += epoch_day_incr; // Increment epoch by one day
   }
+  // console.log(allSpeciesAverage);
 }
 // allDaysForAllFishies();
 
-// console.log(allSpeciesAverage);
 
 
 
@@ -349,11 +349,8 @@ function dailyComparisons(range) {
         return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
     $(function() {
-        // if (chart already exists) {
-        //
-        // }
-
-        x = $('#chartContainer').highcharts({
+        allSpeciesAverage = allSpeciesAverage.slice(0,15);
+        $('#chartContainer').highcharts({
             chart: {
                 type: 'area',
             },
@@ -408,9 +405,11 @@ function dailyComparisons(range) {
                 data: mostRecentTotals
             }]
         });
+
     });
 }
 
+
 // speciesPerDamPerYear(10);   // pass it a range: 10, 25, 50
 // speciesSplit(0);            // pass it an year: 0 = 2014, 1 = 2013 ...
-// dailyComparisons(7);        // pass it a range: 7, 30, 182
+dailyComparisons(7);        // pass it a range: 7, 30, 182
