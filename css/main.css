@@ -23,7 +23,6 @@ video {
 }
 
 header {
-    /*background-color: rgba(255,255,255,0.8);*/
     width: 100%;
     height: 500px;
     overflow: hidden;
@@ -65,23 +64,19 @@ section {
     padding: 75px 0;
 }
 
-.locationFocus
-
 section:first-child {
     padding-top: 150px;
 }
 
 h1, h2, h3, h4, h5, h6, p {
-    padding: 0 10%;
+    padding: 0 100px;
     font-family: "Droid Sans", “Helvetica Neue”, Helvetica, Arial, sans-serif;
     font-weight: 900;
+    text-align: center;
 }
 
 h1, h2 {
     text-align: center;
-}
-
-h3, h4 {
 }
 
 h5 {
@@ -89,12 +84,14 @@ h5 {
     text-align: center;
 }
 
-p, ul {
+p {
     font-family: "Cabin", “Helvetica Neue”, Helvetica, Arial, sans-serif;
     font-weight: 900;
     line-height: 1.2em;
     letter-spacing: .1em;
     font-size: 14px;
+    text-align: justify;
+    margin-bottom: 15px;
 }
 
 footer {
@@ -122,7 +119,7 @@ footer {
     display: inline-block;
     width: 800px;
     position: absolute;
-    top: 150px;
+    top: 100px;
     /*left: 25px;*/
     left: calc(50% - 400px);
     z-index: 600;
@@ -132,7 +129,7 @@ footer {
     width: 100%;
     text-transform: uppercase;
     position: relative;
-    top: 50px;
+    top: 105px;
     left: 25px;
 }
 
@@ -146,25 +143,18 @@ footer {
     margin-left: 150px;
 }
 
-
-
-
-
 .rssData {
-    position: static;
+    position: absolute;
+    width: 540px;
+    top: 300px;
+    left: calc( 50% - 250px );
 }
 
-/*.wrapper {
-    max-width: 90%;
-    margin: 10px auto;
-    padding: 10px 20px;
-    background: #f4f7f8;
-    border-radius: 8px;
-}*/
-
-.graphic {
-    margin: 1em auto;
-    width: 20%;
+#rssFishCount {
+    font-family: "Droid Sans", “Helvetica Neue”, Helvetica, Arial, sans-serif;
+    /*font-size: .840em;*/
+    font-size: 1.45em;
+    padding: 15px;
 }
 
 .chartDropDown {
@@ -175,20 +165,16 @@ footer {
 
 .center {
     text-align: center;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/*
-===================
-rss convert
-===================
-*/
+strong {
+    font-weight: 900;
+}
 
-#rssFishCount {
-    text-align: center;
-    font-family: "Droid Sans", “Helvetica Neue”, Helvetica, Arial, sans-serif;
-    font-size: 1.7em;
-    padding: 15px;
+#charts {
+    margin: 0 100px;
 }
 
 /*
@@ -196,49 +182,22 @@ rss convert
 div content
 ==================
 */
-/*.siteDescriptions {
-    margin: 0 auto;
-    display: flex;
-    flex-flow: row wrap;
-    padding: 40px 30px;
+
+.active {
+    display: block;
+    background-color: #ddd;
+    padding: 50px 0;
 }
 
-/*testing on bon div - add class to all others when functional*/
-/*.divContent {
-    display: flex;
-}*/
-
-/*#bonnevilleDam,
-#eagleCreekTrailhead,
-#klickitatRiverFalls,
-#hermanCreekTrailhead {
-    border: 2px solid;
-    padding: 25px;
-    margin: 10px auto;
-    transition: all 0.3s ease 0s;
-}*/
-
-article.locationFocus {
-    border: none;
-    background-color: #dddddd;
-    margin: 0;
-    padding: 50px;
-    /*transition: all 0.3s ease 0s;*/
+.active img {
+    float: right;
+    margin: 0 100px 25px 25px;
+    width: 30%;
 }
 
-div p {
-    padding: 0;
+.inactive {
+    display: none;
 }
-
-div h3 {
-    padding: 0;
-}
- div img {
-     width: 100%;
-
-
- }
-
 
 /*
 ================
@@ -246,24 +205,13 @@ svg css
 ================
 */
 
-.cls-1,
-.cls-6,
-.cls-7{
+.cls-1, .cls-6, .cls-7{
     fill:none;
 }
-.cls-1,
-.cls-10,
-.cls-4{
+.cls-1, .cls-10, .cls-4{
     stroke:#000;
 }
-.cls-1,
-.cls-10,
-.cls-2,
-.cls-4,
-.cls-6,
-.cls-7,
-.cls-8,
-.cls-9{
+.cls-1, .cls-10, .cls-2, .cls-4, .cls-6, .cls-7, .cls-8, .cls-9{
     stroke-miterlimit:10;
 }
 .cls-2{
@@ -273,28 +221,19 @@ svg css
 .cls-3{
     font-size:12px;
 }
-.cls-11,
-.cls-13,
-.cls-14,
-.cls-3,
-.cls-5{
+.cls-11, .cls-13, .cls-14, .cls-3, .cls-5{
     font-family:Helvetica;
 }
-.cls-4,
-.cls-9{
+.cls-4, .cls-9{
     fill:#fff;
 }
 .cls-5{
     font-size:14.37px;
 }
-.cls-6,
-.cls-7,
-.cls-8,
-.cls-9{
+.cls-6, .cls-7, .cls-8, .cls-9{
     stroke:#5a829c;
 }
-.cls-6,
-.cls-7{
+.cls-6, .cls-7{
     stroke-linecap:round;
 }
 .cls-6{
@@ -312,13 +251,10 @@ svg css
 .cls-11{
     font-size:14px;
 }
-.cls-12,
-.cls-13,
-.cls-15{
+.cls-12, .cls-13, .cls-15{
     letter-spacing:1px;
 }
-.cls-13,
-.cls-14{
+.cls-13, .cls-14{
     font-size:18px;
 }
 .cls-15{
@@ -336,19 +272,6 @@ interactivity for map
     opacity: .6;
     stroke-width:4px;
 }
-
-/*toggles for divs to show*/
-
-.active {
-    display: block;
-
-}
-
-.inactive {
-    display: none;
-}
-
-/*hannah addition end*/
 
 /*
 =====================

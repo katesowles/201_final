@@ -72,7 +72,7 @@ function initialize() {
 
           // display rssFishCount:
           var fishCountId = document.getElementById('rssFishCount');  // to display rssFishCount in the html
-          fishCountId.textContent = 'Yesterday ' + rssFishCount + ' Chinook, Coho, and Steelhead passed the Bonneville dam.';
+          fishCountId.textContent = 'Yesterday ' + rssFishCount + ' Chinook, Coho, and Steelhead passed the Bonneville dam';
 
           } // if close
 
