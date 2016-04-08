@@ -37,6 +37,17 @@ nav {
     left: calc(50% - 143px);
     z-index: 500;
 }
+section {
+    padding: 75px 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    padding: 0 10%;
+}
+
+
+
+
 
 h1, h2 {
     font-family: "Droid Sans", “Helvetica Neue”, Helvetica, Arial, sans-serif;
@@ -46,7 +57,7 @@ h1, h2 {
     text-align: center;
 }
 
-h3 {
+h3, h4 {
     font-family: "Droid Sans", “Helvetica Neue”, Helvetica, Arial, sans-serif;
     font-weight: 900;
     line-height: 1em;
@@ -54,11 +65,7 @@ h3 {
     letter-spacing: .08em;
 }
 
-h4 {
-    font-family: "Droid Sans", “Helvetica Neue”, Helvetica, Arial, sans-serif;
-    font-weight: 900;
-    font-size: 2em;
-}
+
 
 p {
     font-family: "Cabin", “Helvetica Neue”, Helvetica, Arial, sans-serif;
@@ -66,7 +73,6 @@ p {
     line-height: 24px;
     letter-spacing: .1em;
     font-size: 14px;
-    padding: 2px;
 }
 
 ul, li {
@@ -163,13 +169,17 @@ nav a:hover {
     text-align: center;
 }
 
+.center {
+    text-align: center;
+}
+
 /*
 ===================
 rss convert
 ===================
 */
 
-#fishCount {
+#rssFishCount {
     text-align: center;
     font-family: "Droid Sans", “Helvetica Neue”, Helvetica, Arial, sans-serif;
     font-size: 1.7em;
