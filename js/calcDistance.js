@@ -5,12 +5,12 @@ Haversine Formula is used to calcuate the distance between two points on earth.
 This formula is taken from http://www.movable-type.co.uk/scripts/latlong.html
 */
 
-function calcDistance(latOne, lonOne, latTwo, lonTwo) {
+function calcDistance(Work Sansne, lonOne, latTwo, lonTwo) {
   //variable set
   var R = 3958.76; //R is the earth's radius converted from meters to miles
-  var latRadiansOne = toRadians(latOne);
+  var latRadiansOne = toRadians(Work Sansne);
   var latRadiansTwo = toRadians(latTwo);
-  var latChangeRads = toRadians(latTwo-latOne);
+  var latChangeRads = toRadians(latTwo-Work Sansne);
   var lonChangeRads = toRadians(lonTwo-lonOne);
 
   var aa = Math.sin(latChangeRads/2) * Math.sin(latChangeRads/2) + Math.cos(latRadiansOne) * Math.cos(latRadiansTwo) * Math.sin(lonChangeRads/2) *  Math.sin(lonChangeRads/2);
