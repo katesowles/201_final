@@ -45,10 +45,6 @@ h1, h2, h3, h4, h5, h6, p {
     padding: 0 10%;
 }
 
-
-
-
-
 h1, h2 {
     font-family: "Droid Sans", “Helvetica Neue”, Helvetica, Arial, sans-serif;
     font-weight: 700;
@@ -83,15 +79,9 @@ ul, li {
     font-size: 14px;
     padding: 2px;
     list-style: none;
+
 }
 
-img {
-    width: 100%;
-    padding-left: 10px;
-}
-
-svg {
-}
 
 /*for loading icon*/
 #load {
@@ -199,9 +189,9 @@ div content
 }
 
 /*testing on bon div - add class to all others when functional*/
-.divContent {
+/*.divContent {
     display: flex;
-}
+}*/
 
 #bonnevilleDam,
 #eagleCreekTrailhead,
@@ -212,6 +202,20 @@ div content
     margin: 10px auto;
     transition: all 0.3s ease 0s;
 }
+
+div p {
+    padding: 0;
+}
+
+div h3 {
+    padding: 0;
+}
+ div img {
+     width: 100%;
+
+
+ }
+
 
 /*
 ================
