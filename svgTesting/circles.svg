@@ -1,0 +1,71 @@
+<svg data-name="Layer 1" id="Layer_1" viewBox="0 0 251 52" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f7a8aa;
+      }
+      .cls-1,
+      .cls-2,
+      .cls-3,
+      .cls-4,
+      .cls-5 {
+        stroke: #231f20;
+        stroke-miterlimit: 10;
+      }
+      .cls-2 {
+        fill: #f8f7f7;
+      }
+      .cls-3 {
+        fill: #99d095;
+      }
+      .cls-4 {
+        fill: #2c79be;
+      }
+      .cls-5 {
+        fill: #eff0aa;
+      }
+      .cls-1 {
+        fill: #f7a8aa;
+      }
+      .cls-1:hover {
+        fill: red;
+      }
+      .cls-2:hover {
+        fill: red;
+      }
+      .cls-3:hover {
+        fill: red;
+      }
+      .cls-4:hover {
+        fill: red;
+      }
+      .cls-5:hover {
+        fill: red;
+        stroke: #231f20;
+        stroke-miterlimit: 10;
+      }
+      .cls-2:hover {
+        fill: red;
+      }
+      .cls-3:hover {
+        fill: red;
+      }
+      .cls-4:hover {
+        fill: red;
+      }
+      .cls-5:hover{
+        fill: red;
+      }
+
+    </style>
+  </defs>
+  <title>circles for testing</title>
+  <circle id="outterOne" class="cls-1" cx="160" cy="26" r="25.5"/>
+  <circle class="cls-2" cx="160" cy="26" r="18.5"/>
+  <circle id="outterTwo" class="cls-3" cx="93" cy="26" r="25.5"/>
+  <circle class="cls-2" cx="93" cy="26" r="18.5"/>
+  <circle id="outterThree" class="cls-4" cx="26" cy="26" r="25.5"/>
+  <circle class="cls-2" cx="26" cy="26" r="18.5"/>
+  <circle id="outterFour" class="cls-5" cx="225" cy="26" r="25.5"/>
+  <circle class="cls-2" cx="225" cy="26" r="18.5"/>
+</svg>
