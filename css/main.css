@@ -304,9 +304,9 @@ svg css
     fill:#9ebbcb;
 }
 .cls-10{
-    fill:#faa;
-    stroke-width:3px;
-    opacity: 1;
+    fill:#9ebbce;
+    stroke-width:2px;
+    opacity: 0.7;
     transition: all 0.3s ease 0s;
 }
 .cls-11{
@@ -332,14 +332,16 @@ interactivity for map
 */
 
 .cls-10:hover {
-    fill: #3CB25D;
+    fill: #ff8888;
     opacity: .6;
+    stroke-width:4px;
 }
 
 /*toggles for divs to show*/
 
 .active {
     display: block;
+
 }
 
 .inactive {

@@ -23,6 +23,12 @@ divDisplayFour.className = "inactive";
     divDisplayTwo.className = "inactive";
     divDisplayThree.className = "inactive";
     divDisplayFour.className = "inactive";
+
+    // change fill
+    svgBonnevilleSite.setAttribute("style", "fill: #ff8888");
+    svgEagleSite.setAttribute("style", "fill: #9ebbce");
+    svgHermanSite.setAttribute("style", "fill: #9ebbce");
+    svgKlickSite.setAttribute("style", "fill: #9ebbce");
  })
 
  svgEagleSite.addEventListener("mouseover", function() {
@@ -35,6 +41,12 @@ divDisplayFour.className = "inactive";
     divDisplayTwo.className = "active";
     divDisplayThree.className = "inactive";
     divDisplayFour.className = "inactive";
+
+    // change fill
+    svgBonnevilleSite.setAttribute("style", "fill: #9ebbce");
+    svgEagleSite.setAttribute("style", "fill: #ff8888");
+    svgHermanSite.setAttribute("style", "fill: #9ebbce");
+    svgKlickSite.setAttribute("style", "fill: #9ebbce");
  })
 
  svgHermanSite.addEventListener("mouseover", function() {
@@ -47,16 +59,28 @@ divDisplayFour.className = "inactive";
    divDisplayTwo.className = "inactive";
    divDisplayThree.className = "active";
    divDisplayFour.className = "inactive";
+
+   // change fill
+   svgBonnevilleSite.setAttribute("style", "fill: #9ebbce");
+   svgEagleSite.setAttribute("style", "fill: #9ebbce");
+   svgHermanSite.setAttribute("style", "fill: #ff8888");
+   svgKlickSite.setAttribute("style", "fill: #9ebbce");
  })
 
  svgKlickSite.addEventListener("mouseover", function() {
      // localStorage functionality:
      storageObject.divDisplay = 4;
      storageIn();
-     
+
    // displaying / hiding divs:
    divDisplayOne.className = "inactive";
    divDisplayTwo.className = "inactive";
    divDisplayThree.className = "inactive";
    divDisplayFour.className = "active";
+
+   // change fill
+   svgBonnevilleSite.setAttribute("style", "fill: #9ebbce");
+   svgEagleSite.setAttribute("style", "fill: #9ebbce");
+   svgHermanSite.setAttribute("style", "fill: #9ebbce");
+   svgKlickSite.setAttribute("style", "fill: #ff8888");
  })
