@@ -30,55 +30,71 @@ header {
 }
 
 nav {
-    /*width: calc(100% - 110px);*/
+    width: 100%;
+    padding: 8px 0;
     display: inline-block;
     position: absolute;
-    top: 450px;
-    left: calc(50% - 143px);
+    background-color: rgba(51,51,51,0.2);
+    top: 460px;
+    /*left: calc(50% - 143px);*/
     z-index: 500;
 }
+
+nav a {
+    font-family: "Droid Sans", “Helvetica Neue”, Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 1em;
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+nav a:last-child {
+    margin-right: 0;
+}
+
+nav a:hover {
+    color: #ffaaaa;
+    transition: all .4s ease-in-out;
+}
+
 section {
     padding: 75px 0;
 }
 
+.locationFocus
+
+section:first-child {
+    padding-top: 150px;
+}
+
 h1, h2, h3, h4, h5, h6, p {
     padding: 0 10%;
+    font-family: "Droid Sans", “Helvetica Neue”, Helvetica, Arial, sans-serif;
+    font-weight: 900;
 }
 
 h1, h2 {
-    font-family: "Droid Sans", “Helvetica Neue”, Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    line-height: 1em;
-    letter-spacing: .08em;
     text-align: center;
 }
 
 h3, h4 {
-    font-family: "Droid Sans", “Helvetica Neue”, Helvetica, Arial, sans-serif;
-    font-weight: 900;
-    line-height: 1em;
-    /*font-style: italic;*/
-    letter-spacing: .08em;
 }
 
+h5 {
+    font-size: 1em;
+    text-align: center;
+}
 
-
-p {
+p, ul {
     font-family: "Cabin", “Helvetica Neue”, Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    line-height: 24px;
-    letter-spacing: .1em;
-    font-size: 14px;
-}
-
-ul, li {
-    font-family: "Droid Sans", “Helvetica Neue”, Helvetica, Arial, sans-serif;
     font-weight: 900;
-    line-height: 24px;
+    line-height: 1.2em;
     letter-spacing: .1em;
     font-size: 14px;
-    padding: 2px;
-    list-style: none;
 }
 
 footer {
@@ -102,59 +118,49 @@ footer {
     margin: 0 auto;
 }
 
-/*
-===================
-navbar css
-===================
-*/
-
 .logo {
     display: inline-block;
-    width: 200px;
+    width: 800px;
     position: absolute;
-    top: 80px;
+    top: 150px;
     /*left: 25px;*/
-    left: calc(50% - 100px);
+    left: calc(50% - 400px);
     z-index: 600;
 }
 
-#brand-logo {
-    width: 100px;
-    height: 100%;
+.logo h1 {
+    width: 100%;
+    text-transform: uppercase;
+    position: relative;
+    top: 50px;
+    left: 25px;
 }
+
+#brand-logo {
+    width: 150px;
+    position: absolute;
+    left: calc(50% - 75px);
+}
+
+.logo h1 span {
+    margin-left: 150px;
+}
+
+
+
+
 
 .rssData {
     position: static;
 }
 
-nav a {
-    font-family: "Droid Sans", “Helvetica Neue”, Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    font-weight: 200;
-    font-size: 26px;
-    line-height: 1em;
-    color: #444444;
-    text-decoration: none;
-    padding: 37px 0;
-    margin-right: 20px;
-}
-
-nav a:last-child {
-    margin-right: 0;
-}
-
-nav a:hover {
-    color: #ffaaaa;
-    transition: all .4s ease-in-out;
-}
-
-.wrapper {
+/*.wrapper {
     max-width: 90%;
     margin: 10px auto;
     padding: 10px 20px;
     background: #f4f7f8;
     border-radius: 8px;
-}
+}*/
 
 .graphic {
     margin: 1em auto;
@@ -169,6 +175,7 @@ nav a:hover {
 
 .center {
     text-align: center;
+    margin: 0 auto;
 }
 
 /*
@@ -189,7 +196,7 @@ rss convert
 div content
 ==================
 */
-.siteDescriptions {
+/*.siteDescriptions {
     margin: 0 auto;
     display: flex;
     flex-flow: row wrap;
@@ -197,11 +204,11 @@ div content
 }
 
 /*testing on bon div - add class to all others when functional*/
-.divContent {
+/*.divContent {
     display: flex;
-}
+}*/
 
-#bonnevilleDam,
+/*#bonnevilleDam,
 #eagleCreekTrailhead,
 #klickitatRiverFalls,
 #hermanCreekTrailhead {
@@ -209,6 +216,14 @@ div content
     padding: 25px;
     margin: 10px auto;
     transition: all 0.3s ease 0s;
+}*/
+
+article.locationFocus {
+    border: none;
+    background-color: #dddddd;
+    margin: 0;
+    padding: 50px;
+    /*transition: all 0.3s ease 0s;*/
 }
 
 div p {
