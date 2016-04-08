@@ -199,7 +199,7 @@ function allDaysForAllFishies() {
 }
 // allDaysForAllFishies();
 
-console.log(allSpeciesAverage);
+// console.log(allSpeciesAverage);
 
 
 

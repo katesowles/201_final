@@ -46,7 +46,7 @@ google.load("feeds", "1");
 //****** Function returns an Array with objects from the RSS-Feed:
 
 function initialize() {
-      console.log("RSS-Feed first updated at: ", fishDate);
+    //   console.log("RSS-Feed first updated at: ", fishDate);
 
       var feed = new google.feeds.Feed("http://www.fpc.org/rss/rssAdultCounts.aspx");
 
@@ -65,7 +65,7 @@ function initialize() {
           makeProjectDate(rawData, chinookCohoData);
           makeChinookCoho(rawData, chinookCohoData);
 
-          console.log('Current RSS-Feed Data --- chinookCohoData:  ', chinookCohoData);
+        //   console.log('Current RSS-Feed Data --- chinookCohoData:  ', chinookCohoData);
 
           // calc total fish passed Bonneville Dam:
           rssFishCount = parseInt(chinookCohoData[0].Chinook) + parseInt(chinookCohoData[0].Coho) + parseInt(chinookCohoData[0].Steelhead);

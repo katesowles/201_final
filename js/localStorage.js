@@ -46,7 +46,7 @@ var checkStorage = function() {
                     divDisplayTwo.className = "inactive";
                     divDisplayThree.className = "inactive";
                     divDisplayFour.className = "inactive";
-                    console.log("Div-1 restored");
+                    // console.log("Div-1 restored");
                     break;
 
                 case 2:
@@ -54,7 +54,7 @@ var checkStorage = function() {
                     divDisplayTwo.className = "active";
                     divDisplayThree.className = "inactive";
                     divDisplayFour.className = "inactive";
-                    console.log("Div-2 restored");
+                    // console.log("Div-2 restored");
                     break;
 
                 case 3:
@@ -62,7 +62,7 @@ var checkStorage = function() {
                     divDisplayTwo.className = "inactive";
                     divDisplayThree.className = "active";
                     divDisplayFour.className = "inactive";
-                    console.log("Div-3 restored");
+                    // console.log("Div-3 restored");
                     break;
 
                 case 4:
@@ -70,7 +70,7 @@ var checkStorage = function() {
                     divDisplayTwo.className = "inactive";
                     divDisplayThree.className = "inactive";
                     divDisplayFour.className = "active";
-                    console.log("Div-4 restored");
+                    // console.log("Div-4 restored");
                     break;
 
                 default:
@@ -78,7 +78,7 @@ var checkStorage = function() {
                 divDisplayTwo.className = "inactive";
                 divDisplayThree.className = "inactive";
                 divDisplayFour.className = "inactive";
-                console.log("Default-div restored");
+                // console.log("Default-div restored");
 
             }
 
@@ -86,7 +86,7 @@ var checkStorage = function() {
      // COMMENT BACK IN WHEN CHARTS IS MERGED !!! //
 
             // uses storageObject.chartNumber to re-call that chart and display it:
-            // chartFunctionsArray[outOfStorage.chartNumber]();
+            chartFunctionsArray[outOfStorage.chartNumber]();
 
     } else {
         // make a "fresh" storageObject
@@ -96,7 +96,7 @@ var checkStorage = function() {
         divDisplayTwo.className = "inactive";
         divDisplayThree.className = "inactive";
         divDisplayFour.className = "inactive";
-        console.log("Start-up div-1");
+        // console.log("Start-up div-1");
 
     }//Main if Close
 

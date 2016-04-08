@@ -20,50 +20,57 @@ dropDownEvent.addEventListener("change", function() {
 
 
 function chartOne() {
-    // storageObject.chartNumber = 1;
+    // container.destroy();
+    storageObject.chartNumber = 0;
     chartTitle.textContent = "Historical Daily Averages vs Most Recent Week";
-    //stroageIn();
+    storageIn();
     dailyComparisons(7);
 }
 
 function chartTwo() {
-    // storageObject.chartNumber = 2;
+    // container.destroy();
+    storageObject.chartNumber = 1;
     chartTitle.textContent = "Annual Salmon Count, Last 10 Years";
-    // storageIn();
+    storageIn();
     speciesPerDamPerYear(10);
 }
 
 function chartThree() {
-    // storageObject.chartNumber = 3;
+    // container.destroy();
+    storageObject.chartNumber = 2;
     chartTitle.textContent = "Annual Salmon Count, Last 25 Years";
-    // storageIn();
+    storageIn();
     speciesPerDamPerYear(25);
 }
 
 function chartFour() {
-    // storageObject.chartNumber = 4;
-    chartTitle.textContent = "Annual Salmon Count, Last 25 Years";
-    // storageIn();
+    // container.destroy();
+    storageObject.chartNumber = 3;
+    chartTitle.textContent = "Annual Salmon Count, Last 50 Years";
+    storageIn();
     speciesPerDamPerYear(50);
 }
 
 function chartFive() {
-    // storageObject.chartNumber = 5;
+    // container.destroy();
+    storageObject.chartNumber = 4;
     chartTitle.textContent = "Species Split, 2014";
-    // storageIn();
+    storageIn();
     speciesSplit(0);
 }
 
 function chartSix() {
-    // storageObject.chartNumber = 6;
+    // container.destroy();
+    storageObject.chartNumber = 5;
     chartTitle.textContent = "Species Split, 2009";
-    // storageIn();
+    storageIn();
     speciesSplit(5);
 }
 
 function chartSeven() {
-    // storageObject.chartNumber = 7;
+    // container.destroy();
+    storageObject.chartNumber = 6;
     chartTitle.textContent = "Species Split, 2004";
-    // storageIn();
+    storageIn();
     speciesSplit(10);
 }
