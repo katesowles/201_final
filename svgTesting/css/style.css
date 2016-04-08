@@ -1,0 +1,124 @@
+.chartDropDown {
+  margin: 0 auto;
+  padding: 50px;
+  text-align: center;
+}
+
+.siteDescriptions {
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 40px 30px;
+}
+
+#bonnevilleDam,
+#dallesDam,
+#eagleCreekTrailhead,
+#klickitatRiverFalls,
+#hermanCreekTrailhead {
+  border: 2px solid;
+  padding: 25px;
+  margin: 10px auto;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  line-height: 2em;
+  letter-spacing: .08em;
+}
+
+h3 {
+  font-family: 'Lato', “Helvetica Neue”, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1em;
+  font-style: italic;
+  letter-spacing: .08em;
+}
+
+p {
+  font-family: 'Playfair Display', Times, serif;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: .1em;
+  font-size: 14px;
+  padding: 2px;
+}
+
+ul, li {
+  font-family: 'Playfair Display', Times, serif;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: .1em;
+  font-size: 14px;
+  padding: 2px;
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+.active {
+  display: block;
+}
+
+.inactive {
+  display: none;
+}
+
+  .cls-1 {
+    fill: #f7a8aa;
+  }
+  .cls-1,
+  .cls-2,
+  .cls-3,
+  .cls-4,
+  .cls-5 {
+    stroke: #231f20;
+    stroke-miterlimit: 10;
+  }
+  .cls-2 {
+    fill: #f8f7f7;
+  }
+  .cls-3 {
+    fill: #99d095;
+  }
+  .cls-4 {
+    fill: #2c79be;
+  }
+  .cls-5 {
+    fill: #eff0aa;
+  }
+  .cls-1 {
+    fill: #f7a8aa;
+  }
+  .cls-1:hover {
+    fill: red;
+  }
+  .cls-2:hover {
+    fill: red;
+  }
+  .cls-3:hover {
+    fill: red;
+  }
+  .cls-4:hover {
+    fill: red;
+  }
+  .cls-5:hover {
+    fill: red;
+    stroke: #231f20;
+    stroke-miterlimit: 10;
+  }
+  .cls-2:hover {
+    fill: red;
+  }
+  .cls-3:hover {
+    fill: red;
+  }
+  .cls-4:hover {
+    fill: red;
+  }
+  .cls-5:hover{
+    fill: red;
+  }
