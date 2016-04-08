@@ -1,0 +1,304 @@
+/*
+======================
+    general styles
+======================
+*/
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Cabin", “Helvetica Neue”, Helvetica, Arial, sans-serif;
+    color: #444444;
+    width: 100%;
+}
+
+video {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    height: 500px;
+    overflow: hidden;
+}
+
+nav {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 8px 0;
+    display: inline-block;
+    position: absolute;
+    background-color: rgba(51,51,51,0.2);
+    top: 460px;
+    /*left: calc(50% - 143px);*/
+    z-index: 500;
+}
+
+nav a {
+    font-family: "Droid Sans", “Helvetica Neue”, Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 1em;
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+nav a:last-child {
+    margin-right: 0;
+}
+
+nav a:hover {
+    color: #ffaaaa;
+    transition: all .4s ease-in-out;
+}
+
+section, footer {
+    padding: 75px 0;
+    margin: 0 auto;
+}
+
+section:nth-child(even), footer {
+    background-color: #dddddd;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    padding: 0 100px;
+    font-family: "Droid Sans", “Helvetica Neue”, Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    text-align: center;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h2, h3 {
+    margin-bottom: 40px;
+}
+
+h5 {
+    font-size: 1em;
+    text-align: center;
+}
+
+p {
+    font-family: "Cabin", “Helvetica Neue”, Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    line-height: 1.5em;
+    letter-spacing: .1em;
+    font-size: 14px;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+footer {
+    padding-bottom: 70px;
+}
+
+#footerText {
+    text-align: center;
+    font-family: "Droid Sans", “Helvetica Neue”, Helvetica, Arial, sans-serif;
+    font-size: 1em;
+}
+
+/*for loading icon*/
+#load {
+    position: flex;
+    width: 94px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.logo {
+    display: inline-block;
+    width: 800px;
+    position: absolute;
+    top: 100px;
+    /*left: 25px;*/
+    left: calc(50% - 400px);
+    z-index: 600;
+}
+
+.logo h1 {
+    width: 100%;
+    max-width: 1280px;
+    text-transform: uppercase;
+    position: relative;
+    top: 105px;
+    left: 25px;
+}
+
+#brand-logo {
+    width: 150px;
+    position: absolute;
+    left: calc(50% - 75px);
+}
+
+.logo h1 span {
+    margin-left: 150px;
+}
+
+.rssData {
+    position: absolute;
+    width: 540px;
+    top: 300px;
+    left: calc( 50% - 250px );
+}
+
+#rssFishCount {
+    font-family: "Droid Sans", “Helvetica Neue”, Helvetica, Arial, sans-serif;
+    /*font-size: .840em;*/
+    font-size: 1.45em;
+    padding: 15px;
+}
+
+.chartDropDown {
+    margin: 0 auto;
+    padding: 50px;
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+strong {
+    font-weight: 900;
+}
+
+#charts, #maps {
+    padding: 75px 100px;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*
+==================
+div content
+==================
+*/
+
+.active {
+    display: block;
+    background-color: #ddd;
+    padding: 50px 0;
+}
+
+.active img {
+    float: right;
+    margin: 0 100px 25px 25px;
+    width: 30%;
+    max-width: 1280px;
+}
+
+.inactive {
+    display: none;
+}
+
+/*
+================
+svg css
+================
+*/
+
+.cls-1, .cls-6, .cls-7{
+    fill:none;
+}
+.cls-1, .cls-10, .cls-4{
+    stroke:#000;
+}
+.cls-1, .cls-10, .cls-2, .cls-4, .cls-6, .cls-7, .cls-8, .cls-9{
+    stroke-miterlimit:10;
+}
+.cls-2{
+    fill:#fcc;
+    stroke:#f88;
+}
+.cls-3{
+    font-size:12px;
+}
+.cls-11, .cls-13, .cls-14, .cls-3, .cls-5{
+    font-family:Helvetica;
+}
+.cls-4, .cls-9{
+    fill:#fff;
+}
+.cls-5{
+    font-size:14.37px;
+}
+.cls-6, .cls-7, .cls-8, .cls-9{
+    stroke:#5a829c;
+}
+.cls-6, .cls-7{
+    stroke-linecap:round;
+}
+.cls-6{
+    stroke-width:0.5px;
+}
+.cls-8{
+    fill:#9ebbcb;
+}
+.cls-10{
+    fill:#9ebbce;
+    stroke-width:2px;
+    opacity: 0.7;
+    transition: all 0.3s ease 0s;
+}
+.cls-11{
+    font-size:14px;
+}
+.cls-12, .cls-13, .cls-15{
+    letter-spacing:1px;
+}
+.cls-13, .cls-14{
+    font-size:18px;
+}
+.cls-15{
+    white-space:pre;
+}
+
+/*
+=====================
+interactivity for map
+=====================
+*/
+
+.cls-10:hover {
+    fill: #ff8888;
+    opacity: .6;
+    stroke-width:4px;
+}
+
+/*
+=====================
+mailchimp
+=====================
+*/
+
+#mc_embed_signup {
+    clear: both;
+    font-family: "Droid Sans", “Helvetica Neue”, Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    width: 100%;
+    max-width: 1280px;
+}
+
+#mc_embed_signup div {
+    margin-left: 25px;
+}
