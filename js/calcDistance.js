@@ -63,7 +63,7 @@ function userLocation(currentPosition) {
 
     distanceMiles = calcDistance(currentPosition.coords.latitude, currentPosition.coords.longitude, fvsLatitude, fvsLongitude);
 
-    fishViewingSpot.textContent = distanceMiles + " miles to ";
+    fishViewingSpot.textContent = distanceMiles + " miles from ";
 
   }
 
