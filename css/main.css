@@ -30,6 +30,7 @@ header {
 
 nav {
     width: 100%;
+    max-width: 1280px;
     padding: 8px 0;
     display: inline-block;
     position: absolute;
@@ -163,6 +164,11 @@ footer {
     text-align: center;
 }
 
+.grey {
+    background-color: #ddd;
+    padding: 25px;
+}
+
 .center {
     text-align: center;
     margin-left: auto;
@@ -280,7 +286,6 @@ mailchimp
 */
 
 #mc_embed_signup {
-    background: #fff;
     clear: left;
     font: 14px Helvetica, Arial, sans-serif;
     width: 100%;

@@ -5,7 +5,7 @@
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <meta charset="utf-8"></meta>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SlamminSalmon!</title>
+    <title>Spot A Salmon</title>
     <script src="https://code.jquery.com/jquery-2.2.2.js" integrity="sha256-4/zUCqiq0kqxhZIyp4G0Gk+AOtCJsY1TA00k5ClsZYE=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/normalize.css"></link>
     <link rel="stylesheet" href="css/skeleton.css"></link>
@@ -19,9 +19,9 @@
         </div>
         <nav>
             <div class="center">
+                <a href="#about">about</a>
                 <a href="#map">map</a>
                 <a href="#charts">charts</a>
-                <a href="#about">about</a>
             </div>
         </nav>
 
@@ -37,6 +37,15 @@
         </div>
     </header>
 
+    <section id="about" class="grey">
+        <h2>About Us</h2>
+        <p class="center">Welcome to Spot A Salmon!</p>
+        <p>If you want to see salmon migrating in real life, in the greater Portland area, this site will tell you where to go and if it is a good time to go. The peak numbers have been declining steadily on average since records began in the 50's ( and ever since the white man settled the west coast). However, salmon runs do fluctuate and there are a lot a factors that influence this incredible event. In the last years the peak numbers have been around 9,000 per day for the spring-run, and 30,000 per day for the fall-run (for Chinook, Coho and Steelhaed). Check the daily fish-count at the top of this website or the charts to see where we are at as of yesterday!</p>
+        <p>Our daily fish counts come from the Army Corps of Engineers data for the Bonneville and Dalles Dam fish ladders.</p>
+        <p>We built this site because it can be quite difficult for the average person to find this data and wanted to make this information more available and easy to understand for everyone regardless of age. Salmon migration is a small, but very important, piece of the eco-system and you can see how the migration numbers have changed over the years through our interactive charts. For example on April 6th, 1965 there were over 2000 salmon and steelhead moving past the Bonneville Dam, yet on April 6th, 2016 only 169 salmon made it.</p>
+        <p>We hope you enjoy this site, and if you do decide to go catch a glimpse of these amazing creatures show some respect for their journey.</p>
+    </section>
+
     <section id="map">
         <h2>Fish Viewing Sites</h2>
         <h5>To see additional information on the fish viewing sites, move your mouse over the different locations on the map.</h5>
@@ -45,7 +54,7 @@
 
         </div>
         <div class="siteDescriptions">
-            <article id="bonnevilleDam" class="locationFocus">
+            <article id="bonnevilleDam" class="grey">
                 <h3>Bonneville Dam Fish Ladder</h3>
                 <img src="img/bonnevilleBW500.png" alt="bville fish" />
                 <p><strong>As the salmon swims, you are <span data-lat="45.644276" data-lon="-121.940634" class="getSpan">__ miles </span>from Bonneville Dam</strong></p>
@@ -59,7 +68,7 @@
                 <p>Reference: <a href="http://www.nwp.usace.army.mil/Locations/ColumbiaRiver/Bonneville.aspx">ACOE</a></p>
             </article>
 
-            <article id="eagleCreekTrailhead" class="locationFocus">
+            <article id="eagleCreekTrailhead" class="grey">
                 <h3>Eagle Creek Trailhead</h3>
                 <img src="img/EagleCreekMapBW500.png" alt="eagle creek fish" />
                 <p>As the salmon swims, you are <span data-lat="45.640337" data-lon="-121.928959" class="getSpan">__ miles from</span> Eagle Creek</p>
@@ -72,7 +81,7 @@
                 <p>Reference: <a href="http://www.fs.usda.gov/recarea/crgnsa/recarea/?recid=29910">USDA</a></p>
             </article>
 
-            <article id="klickitatRiverFalls" class="locationFocus">
+            <article id="klickitatRiverFalls" class="grey">
                 <h3>Klickitat River Falls</h3>
                 <img src="img/klickitat_riverBW500.png" alt="klickitat fish" />
                 <p>As the salmon swims, you are <span data-lat="45.7113778" data-lon="-121.2649318" class="getSpan">__ miles from</span> Klickitat River Falls</p>
@@ -84,7 +93,7 @@
                 <p>Reference: <a href="http://www.oregonhikers.org/field_guide/Klickitat_Trail:_Lyle_to_Klickitat_Hike">Oregon Hikers</a></p>
             </article>
 
-            <article id="hermanCreekTrailhead" class="locationFocus">
+            <article id="hermanCreekTrailhead" class="grey">
                 <h3>Herman Creek Trailhead</h3>
                 <img src="img/HermanWyethMapBW500.png" alt="klickitat fish" />
                 <p>As the salmon swims, you are <span data-lat="45.682601" data-lon="-121.842588" class="getSpan">__ miles from</span> Herman Creek Trainhead</p>
@@ -115,16 +124,7 @@
         <div id="chartContainer"></div>
     </section>
 
-    <section id="about" class="pageThree">
-        <h2>About Us</h2>
-        <p class="center">Welcome to Spot A Salmon!</p>
-        <p>If you want to see salmon migrating in real life, in the greater Portland area, this site will tell you where to go and if it is a good time to go. The peak numbers have been declining steadily on average since records began in the 50's ( and ever since the white man settled the west coast). However, salmon runs do fluctuate and there are a lot a factors that influence this incredible event. In the last years the peak numbers have been around XXX for the spring-run, and XXX for the fall-run (for Chinook, Coho and Steelhaed). Check the daily fish-count at the top of this website or the charts to see where we are at as of yesterday!</p>
-        <p>Our daily fish counts come from the Army Corps of Engineers data for the Bonneville and Dalles Dam fish ladders.</p>
-        <p>We built this site because it can be quite difficult for the average person to find this data and wanted to make this information more available and easy to understand for everyone regardless of age. Salmon migration is a small, but very important, piece of the eco-system and you can see how the migration numbers have changed over the years through our interactive charts. For example on April 6th, 1965 there were over 2000 salmon and steelhead moving past the Bonneville Dam, yet on April 6th, 2016 only 169 salmon made it.</p>
-        <p>We hope you enjoy this site, and if you do decide to go catch a glimpse of these amazing creatures show some respect for their journey.</p>
-    </section>
-
-    <div class="footer">
+    <div class="footer grey">
         <footer>
             <h2>Subscribe</h2>
             <!-- Begin MailChimp Signup Form -->
