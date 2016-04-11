@@ -67,7 +67,7 @@ section, footer {
     margin: 0 auto;
 }
 
-section:nth-child(even), footer {
+section:nth-child(odd), footer {
     background-color: #dddddd;
 }
 
@@ -186,6 +186,7 @@ strong {
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
+    background-color: white;
 }
 
 /*
@@ -196,7 +197,7 @@ div content
 
 .active {
     display: block;
-    background-color: #ddd;
+    /*background-color: #ddd;*/
     padding: 50px 0;
 }
 
